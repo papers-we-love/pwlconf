@@ -155,9 +155,41 @@ body {
 
 .mastheadDates {
   color: $color-darkblue;
-  font-size: 1.5em;
-  padding-bottom: 1.5em;
+  font-size: 1.2em;
+  @include media($desktop) {
+    font-size: 1.5em;
+  }
 }
+
+.mastheadLinks {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.5em;
+  span {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  a {
+    display: inline-block;
+    padding: .6em .8em;
+    border-radius: 6px;
+    background-color: $color-darkblue;
+    color: $color-white;
+    font-size: .9em;
+    text-decoration: none;
+    &:hover {
+      background-color: $color-pink;
+    }
+
+    @include media($desktop) {
+      display: inline-block;
+      padding: .4em 1em;
+      font-size: 1.3em;
+    }
+  }
+}
+
 
 // ============
 // Text Content
