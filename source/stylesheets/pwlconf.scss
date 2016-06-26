@@ -386,3 +386,36 @@ body {
 .imgPwlConfNavLogo {
   height: 80px;
 }
+
+// ===============
+// Sponsor Content
+// ===============
+
+.articleTextContent {
+  .imgSponsor {
+    padding: 1em 2em;
+    float: left;
+  }
+
+  .platniumSponsor,
+  .goldSponsor,
+  .bronzeSponsor {
+    width: 60%;
+
+    @include media($mobile) {
+      width: 100%
+    }
+  }
+
+  .additionalSponsor {
+    width: 50%;
+
+    @include media($desktop) {
+      width: 33%;
+    }
+  }
+
+  .sponsorBlurb {
+    margin: 2em 0;
+  }
+}
