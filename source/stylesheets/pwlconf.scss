@@ -263,7 +263,7 @@ body {
   img {
     display: block;
     margin: 0;
-    passing: 0;
+    padding: 0;
   }
 
   .photoCaption {
@@ -309,6 +309,57 @@ body {
     }
   }
 }
+
+// ===============
+// Sponsor Content
+// ===============
+
+.articleSponsorContent {
+  margin: 0;
+  padding: 0;
+  background: $color-white;
+  border-top: $color-lightblue 1px solid;
+  border-bottom: $color-lightblue 1px solid;
+  text-align: center;
+
+  img {
+    display: block;
+    margin: 1em auto;
+    padding: 0;
+  }
+
+ .photoCaption {
+    display: block;
+    margin: 0;
+    color: lighten($color-darkblue, 50);
+    font-family: $sans;
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    a {
+      font-size: 1em;
+      color: darken($color-lightblue, 20);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include media($desktop) {
+      margin-bottom: 1em;
+      h3 {
+        font-size: 1.2em;
+      }
+      a {
+        font-size: .8em;
+      }
+    }
+  }
+
+}
+
 
 // ===============
 // Footer Content
