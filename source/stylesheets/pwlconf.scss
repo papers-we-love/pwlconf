@@ -448,8 +448,9 @@ body {
     float: left;
   }
 
-  .platniumSponsor,
+  .platinumSponsor,
   .goldSponsor,
+  .silverSponsor,
   .bronzeSponsor {
     width: 60%;
 
@@ -468,5 +469,11 @@ body {
 
   .sponsorBlurb {
     margin: 2em 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 }
