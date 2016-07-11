@@ -422,6 +422,12 @@ body {
     }
   }
 
+  img.additionalSponsor {
+    width: 30%;
+    display: flex;
+    margin: 1em auto;
+  }
+
   div.silver {
     @include media($desktop) {
       display: flex;
@@ -441,6 +447,12 @@ body {
       display: flex;
       justify-content: space-between;
     }
+  }
+
+  div.additionalSponsor {
+    margin: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
   }
 
   p.gold {
