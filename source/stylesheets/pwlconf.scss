@@ -368,6 +368,11 @@ body {
 
   border-bottom: $color-lightblue 1px solid;
 
+  a.platinum {
+    display: block;
+    text-align: center;
+  }
+
   a.gold {
     display: block;
     text-align: center;
@@ -379,7 +384,7 @@ body {
     margin-top: 1em;
     @include media($desktop) {
       height: 90px;
-      text-align: left;
+      text-align: center;
       margin-top: 0;
     }
   }
@@ -399,11 +404,15 @@ body {
     }
   }
 
+  img.comcast {
+    width: 75%;
+  }
+
   img.gold {
     margin-top: 1em;
-    width: 90%;
+    width: 80%;
     @include media($desktop) {
-      width: 65%;
+      width: 60%;
       margin-top: 0;
     }
   }
@@ -415,6 +424,16 @@ body {
     }
   }
 
+  img.silver.simple {
+    width: 60%;
+    @include media($desktop) {
+      position: relative;
+      top: 10px;
+      left: -10px;
+      width: 75%;
+    }
+  }
+
   img.bronze {
     width: 50%;
     @include media($desktop) {
@@ -423,9 +442,30 @@ body {
   }
 
   img.additionalSponsor {
-    width: 30%;
+    margin: 1em 0;
+    width: 50%;
+    display: block;
+    @include media($desktop) {
+      width: 40%;
+    }
+  }
+
+  img.additionalSponsor.binary {
+    height: 70px;
+    width: 70px;
+    @include media($desktop) {
+      height: 100px;
+      width: 100px;
+      margin-top: 0;
+    }
+
+  }
+
+  div.additionalSponsorLogos {
+    padding: 1em 0;
+    height: 120px;
     display: flex;
-    margin: 1em auto;
+    justify-content: space-around;
   }
 
   div.silver {
