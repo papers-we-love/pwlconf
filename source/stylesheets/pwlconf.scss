@@ -437,35 +437,39 @@ body {
   img.bronze {
     width: 50%;
     @include media($desktop) {
-      width: 100%;
+      width: 240px;
     }
   }
 
   img.additionalSponsor {
     margin: 1em 0;
-    width: 50%;
+    width: 180px;
     display: block;
     @include media($desktop) {
-      width: 40%;
+      width: 180px;
     }
   }
 
   img.additionalSponsor.binary {
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90px;
     @include media($desktop) {
-      height: 100px;
-      width: 100px;
+      height: 110px;
+      width: 110px;
       margin-top: 0;
     }
 
   }
 
   div.additionalSponsorLogos {
-    padding: 1em 0;
-    height: 120px;
+    padding: .5em 0;
     display: flex;
     justify-content: space-around;
+  }
+
+  div.bronzeSponsorLogos {
+    @extends div.additionalSponsorLogos;
+    height: none;
   }
 
   div.silver {
