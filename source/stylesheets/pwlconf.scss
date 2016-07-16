@@ -94,21 +94,21 @@ body {
 }
 
 .cornerTopLeft {
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
 }
 
 .cornerBottomLeft {
-    -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
 }
 
 .cornerBottomRight {
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
 }
 
 
@@ -211,7 +211,7 @@ body {
   }
 
   h2 {
-    color: $color-mediumblue;
+    color: darken($color-mediumblue, 14);
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1em;
@@ -263,7 +263,7 @@ body {
   img {
     display: block;
     margin: 0;
-    passing: 0;
+    padding: 0;
   }
 
   .photoCaption {
@@ -311,6 +311,213 @@ body {
 }
 
 // ===============
+// Sponsor Content
+// ===============
+
+.articleSponsorContent {
+  margin: 0;
+  padding: 0;
+  background: $color-white;
+  border-top: $color-lightblue 1px solid;
+  border-bottom: $color-lightblue 1px solid;
+  text-align: center;
+
+  img {
+    display: block;
+    margin: 1em auto;
+    padding: 0;
+  }
+
+  .photoCaption {
+    display: block;
+    margin: 0;
+    color: lighten($color-darkblue, 50);
+    font-family: $sans;
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    a {
+      font-size: 1em;
+      color: darken($color-lightblue, 20);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include media($desktop) {
+      margin-bottom: 1em;
+      h3 {
+        font-size: 1.2em;
+      }
+      a {
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+
+// ======================
+// Sponsor Entry Content
+// ======================
+.articleSponsorEntryContent {
+  @extend .articleTextContent;
+
+  border-bottom: $color-lightblue 1px solid;
+
+  a.platinum {
+    display: block;
+    text-align: center;
+  }
+
+  a.gold {
+    display: block;
+    text-align: center;
+  }
+
+  a.silver {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    @include media($desktop) {
+      height: 90px;
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  a.bronze {
+    display: block;
+    height: 40px;
+    text-align: center;
+    margin: 2em 0;
+    @include media($desktop) {
+      padding-right: 2em;
+      margin-bottom: 4em;
+      &:last-child {
+        padding-right: 0;
+        padding-left: 2em;
+      }
+    }
+  }
+
+  img.comcast {
+    width: 75%;
+  }
+
+  img.gold {
+    margin-top: 1em;
+    width: 80%;
+    @include media($desktop) {
+      width: 60%;
+      margin-top: 0;
+    }
+  }
+
+  img.silver {
+    width: 60%;
+    @include media($desktop) {
+      width: 80%;
+    }
+  }
+
+  img.silver.simple {
+    width: 60%;
+    @include media($desktop) {
+      position: relative;
+      top: 10px;
+      left: -10px;
+      width: 75%;
+    }
+  }
+
+  img.bronze {
+    width: 50%;
+    @include media($desktop) {
+      width: 240px;
+    }
+  }
+
+  img.additionalSponsor {
+    margin: 1em 0;
+    width: 180px;
+    display: block;
+    @include media($desktop) {
+      width: 180px;
+    }
+  }
+
+  img.additionalSponsor.binary {
+    height: 90px;
+    width: 90px;
+    @include media($desktop) {
+      height: 110px;
+      width: 110px;
+      margin-top: 0;
+    }
+
+  }
+
+  div.additionalSponsorLogos {
+    padding: .5em 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  div.bronzeSponsorLogos {
+    @extends div.additionalSponsorLogos;
+    height: none;
+  }
+
+  div.silver {
+    @include media($desktop) {
+      display: flex;
+      justify-content: space-between;
+      div {
+        width: 50%;
+        padding-right: 1.5em;
+        &:last-child {
+          padding-left: 1.5em;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  div.bronze {
+    @include media($desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  div.additionalSponsor {
+    margin: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  p.gold {
+    font-size: .9em;
+    @include media($desktop) {
+      font-size: 1em;
+    }
+  }
+
+  p.silver {
+    font-size: .8em;
+    margin-bottom: 2em;
+    @include media($desktop) {
+      font-size: .9em;
+    }
+  }
+}
+
+
+// ===============
 // Footer Content
 // ===============
 
@@ -327,7 +534,7 @@ body {
     font-weight: normal;
     font-size: 1.1em;
     text-transform: uppercase;
-    color: $color-mediumblue;
+    color: darken($color-mediumblue, 14);
     margin: 0 0 .6em 0;
   }
 
@@ -367,20 +574,56 @@ body {
   }
 }
 
+.pageHome > .articleNavigation {
+  background: rgba($color-lightblue, .7);
+  margin-bottom: 1px;
+  padding: 16px 2em;
+
+  a.pwlConfLogo {
+    display: none;
+  }
+
+  .navLink {
+    font-family: $serif;
+    @include media($desktop) {
+      display: inline-block;
+      padding-top: 6px;
+    }
+  }
+
+  .navRow {
+    @include media($desktop) {
+      display: flex;
+      justify-content: space-around;
+    }
+}
+
+}
+
 .navRow {
-  display: flex;
-  justify-content: space-between;
+  @include media($desktop) {
+     display: flex;
+     justify-content: space-between;
+  }
 }
 
 .navLink {
   text-decoration: none;
+  font-family: $serif;
   color: $color-darkblue;
-    &:hover {
-      color: $color-pink;
-      text-decoration: underline;
-    }
-  display: inline-block;
-  padding-top: 30px;
+  &:hover {
+    color: $color-pink;
+    text-decoration: underline;
+  }
+
+  display: block;
+  padding: 6px 0;
+  margin: 5px 0;
+
+  @include media($desktop) {
+     display: inline-block;
+     padding-top: 24px;
+  }
 }
 
 .imgPwlConfNavLogo {
