@@ -575,8 +575,10 @@ body {
 }
 
 .navRow {
-  display: flex;
-  justify-content: space-between;
+  @include media($desktop) {
+     display: flex;
+     justify-content: space-between;
+  }
 }
 
 .navLink {
@@ -586,8 +588,15 @@ body {
     color: $color-pink;
     text-decoration: underline;
   }
-  display: inline-block;
-  padding-top: 30px;
+
+  display: block;
+  padding: 6px 0;
+  margin: 5px 0;
+
+  @include media($desktop) {
+     display: inline-block;
+     padding-top: 24px;
+  }
 }
 
 .imgPwlConfNavLogo {
