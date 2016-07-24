@@ -727,3 +727,93 @@ body {
 .imgPwlConfNavLogo {
   height: 80px;
 }
+
+
+// ======================
+// Speakers Entry Content
+// ======================
+.speakerContainer {
+  @extend .articleTextContent;
+
+  .speakerImage {
+    text-align: center;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: $serif;
+  }
+
+  h2 {
+    text-transform: none;
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+    a {
+      color: lighten($color-darkblue, 20);
+      text-decoration: none;
+      &:hover {
+        color: $color-pink;
+      }
+    }
+  }
+
+  ul.speakerLinks {
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      list-style-type: none;
+      margin: 8px 0;
+      padding: 0 10px 0 10px;
+      display: inline-block;
+      border-right: #ccc 1px solid;
+      &:last-child {
+        border-right: none;
+      }
+
+      a {
+        font-family: $serif;
+        font-size: 1.1em;
+        color: lighten($color-darkblue, 20);
+        text-decoration: none;
+        &:hover {
+          color: $color-pink;
+        }
+      }
+    }
+  }
+}
+
+.articleSpeakerContent {
+  padding-bottom: 3em;
+
+  .homeSpeakers {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .speakerContainer {
+    padding: 0 .5em;
+
+    .speakerImage {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: .9em;
+      margin-top: 0;
+    }
+  }
+}

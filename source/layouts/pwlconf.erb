@@ -3,6 +3,8 @@ description = 'September 15, 2016 in St. Louis, Missouri'
 title = 'PWLConf 2016'
 og_image = 'http://paperswelove.org/images/PWLCONF-logo@2x.png'
 og_title = 'Papers We Love Conference 2016'
+og_width = 770
+og_height = 830
 
 unless current_page.data.title.nil?
   title = "#{title} | #{current_page.data.title}"
@@ -17,6 +19,8 @@ unless current_page.data.description.nil?
 end
 
 unless current_page.data.og_image.nil?
+  og_width = current_page.data.og_width
+  og_height = current_page.data.og_height
   og_image = current_page.data.og_image
 end
 %>
@@ -33,8 +37,8 @@ end
     <meta name="fb:description" content="<%= description %>" />
     <meta name="fb:image" content="<%= og_image %>">
     <meta name="fb:image:type" content="image/png">
-    <meta name="fb:image:width" content="770">
-    <meta name="fb:image:height" content="830">
+    <meta name="fb:image:width" content="<%= og_width %>">
+    <meta name="fb:image:height" content="<%= og_height %>">
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@papers_we_love" />
@@ -45,8 +49,8 @@ end
     <meta name="og:description" content="<%= description %>" />
     <meta name="og:image" content="<%= og_image %>">
     <meta name="og:image:type" content="image/png">
-    <meta name="og:image:width" content="770">
-    <meta name="og:image:height" content="830">
+    <meta name="og:image:width" content="<%= og_width %>">
+    <meta name="og:image:height" content="<%= og_height %>">
     <meta name="og:locale" content="en_us">
     <meta name="og:url" content="http://pwlconf.org<%= current_page.url %>">
 
