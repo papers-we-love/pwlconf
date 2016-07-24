@@ -468,7 +468,7 @@ body {
   }
 
   div.bronzeSponsorLogos {
-    @extends div.additionalSponsorLogos;
+    @extend div.additionalSponsorLogos;
     height: none;
   }
 
