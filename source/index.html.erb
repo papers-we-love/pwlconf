@@ -2,8 +2,8 @@
 title: About
 og_title: Papers We Love Conference 2016
 ---
-<article id="articleContainer" class="pageHome">
-  <section class="articleTagline">
+<article id="articleContainer" class="pageHome" itemscope itemtype="http://schema.org/Event">
+  <section class="articleTagline" itemprop="description">
     Join us for a day with some of Papers We Love’s favorite writers and speakers.
   </section>
   <%= partial 'partials/internalTopNav' %>
@@ -24,7 +24,7 @@ og_title: Papers We Love Conference 2016
       <div class="mastheadRow bottom">
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomLeft" %>
         <div class="mastheadLinks">
-          <span class="mastheadDates">September 15, 2016</span>
+          <span class="mastheadDates" itemprop="startDate" content="2016-09-15T09:00">September 15, 2016</span>
           <a href="https://ti.to/strange-loop/2016">Register at Strange Loop &rarr;</a>
         </div>
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomRight" %>
@@ -41,37 +41,47 @@ og_title: Papers We Love Conference 2016
     </div>
     <div class="homeSpeakers">
       <%= partial 'partials/nobukoYoshida' %>
+      <%= partial 'partials/speakerTbd' %>
+      <%= partial 'partials/speakerTbd' %>
+    </div>
+  </section>
+
+  <section class="articleVenueContent">
+    <div class="articleVenueRow" itemprop="location" itemscope itemtype="http://schema.org/Place">
+      <iframe itemprop="map" itemtype="https://schema.org/Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557794574!2d-90.20978604817624!3d38.629173979512835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel!5e0!3m2!1sen!2sus!4v1469380520055" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
+      <div class="venueInformation">
+        <h2>Conference Location</h2>
+        <p ><strong>September 15<sup>th</sup>, 2016</strong></p>
+        <span itemscope itemtype="http://schema.org/PostalAddress">
+          <p><a itemprop="url" href="http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html"><span itemprop="name">Union Station Doubletree</span></a></p>
+          <p><span itemprop="streetAddress">1820 Market St.</span></p>
+          <p>
+            <span itemprop="addressLocality">St. Louis</span>,
+            <span itemprop="addressRegion">MO</span>
+            <span itemprop="postalCode">63103</span>
+          </p>
+          <p><span itemprop="telephone">(314) 231-1234</span></p>
+        </span>
+      </div>
     </div>
   </section>
 
   <section class="articleSponsorContent">
-    <%= image_tag 'TwoSigma_RGB.jpg', :alt => "TwoSigma", :title => "TwoSigma - a platinum sponsor of PWLConf", :width => '500px' %>
     <div class="photoCaption map">
-      <a href="http://www.twosigma.com/">Two Sigma is a Platinum Sponsor of PWLConf 2016</a>
+      Two Sigma and Comcast are Platinum Sponsors of PWLConf 2016</a>
+    </div>
+    <div class="articleSponsorRow">
+      <span itemprop="sponsor" itemtype="http://schema.org/Organization">
+        <a itemprop="url" href="http://corporate.comcast.com/">
+          <%= image_tag 'comcast.png', :alt => "Comcast", :title => "Comcast - a platinum sponsor of PWLConf", :class => 'comcast' %>
+        </a>
+      </span>
+      <span itemprop="sponsor" itemtype="http://schema.org/Organization">
+        <a itemprop="url" href="https://www.twosigma.com">
+          <%= image_tag 'TwoSigma_RGB.jpg', :alt => "TwoSigma", :title => "TwoSigma - a platinum sponsor of PWLConf", :class => 'twosigma'  %>
+        </a>
+      </span>
     </div>
   </section>
-
-  <section class="articleSponsorContent">
-    <%= image_tag 'comcast.png', :alt => "Comcast", :title => "Comcast - a platinum sponsor of PWLConf", :width => '360px' %>
-    <div class="photoCaption map">
-      <a href="http://corporate.comcast.com/">Comcast is a Platinum Sponsor of PWLConf 2016</a>
-    </div>
-  </section>
-
-  <section class="articleFooterContent">
-    <div class="footerRow">
-      <div class="footerItem">
-        <h2>Web</h2>
-        <a href="http://paperswelove.org">paperswelove.org</a>
-      </div>
-      <div class="footerItem">
-        <h2>Twitter</h2>
-        <a href="https://twitter.com/papers_we_love">@papers_we_love</a>
-      </div>
-      <div class="footerItem">
-        <h2>Email</h2>
-        <a href="mailto:pwlconf@paperswelove.org">pwlconf@paperswelove.org</a>
-      </div>
-    </div>
-  </section>
+  <%= partial 'partials/footer' %>
 </article>
