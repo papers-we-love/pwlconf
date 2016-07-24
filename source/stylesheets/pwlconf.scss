@@ -457,10 +457,10 @@ body {
 
   .photoCaption {
     display: block;
-    margin: 0;
+    margin: 1em 0 0 0;
     color: lighten($color-darkblue, 50);
     font-family: $sans;
-    font-size: .8em;
+    font-size: .7em;
 
     a {
       font-size: .8em;
@@ -473,7 +473,7 @@ body {
 
     @include media($desktop) {
       margin-bottom: 1em;
-      font-size: 1em;
+      font-size: .8em;
 
       a {
         font-size: .8em;
@@ -935,6 +935,19 @@ body {
         &:hover {
           color: $color-pink;
           text-decoration: underline;
+        }
+      }
+    }
+
+    p.button {
+      margin-top: 1.5em;
+      a {
+        background: $color-darkblue;
+        padding: 10px;
+        border-radius: 3px;
+        color: #fff;
+        &:hover {
+          background: $color-pink;
         }
       }
     }
