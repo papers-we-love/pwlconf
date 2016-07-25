@@ -1,7 +1,11 @@
 <%
-title = 'PWLConf 2016'
-og_title = 'Papers We Love Conference 2016'
 description = 'September 15, 2016 in St. Louis, Missouri'
+title = 'PWLConf 2016'
+og_image = 'http://pwlconf.org/images/PWLCONF-logo@2x.png'
+og_title = 'Papers We Love Conference 2016'
+og_width = 770
+og_height = 830
+og_image_type = 'image/png'
 
 unless current_page.data.title.nil?
   title = "#{title} | #{current_page.data.title}"
@@ -13,6 +17,16 @@ end
 
 unless current_page.data.description.nil?
   description = current_page.data.description
+end
+
+unless current_page.data.og_image.nil?
+  og_width = current_page.data.og_width
+  og_height = current_page.data.og_height
+  og_image = current_page.data.og_image
+end
+
+unless current_page.data.og_image_type.nil?
+  og_image_type = current_page.data.og_image_type
 end
 %>
 <!doctype html>
@@ -26,10 +40,10 @@ end
     <meta name="description" content="<%= description %>" />
 
     <meta name="fb:description" content="<%= description %>" />
-    <meta name="fb:image" content="http://paperswelove.org/images/PWLCONF-logo@2x.png">
-    <meta name="fb:image:type" content="image/png">
-    <meta name="fb:image:width" content="770">
-    <meta name="fb:image:height" content="830">
+    <meta name="fb:image" content="<%= og_image %>">
+    <meta name="fb:image:type" content="<%= og_image_type %>">
+    <meta name="fb:image:width" content="<%= og_width %>">
+    <meta name="fb:image:height" content="<%= og_height %>">
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@papers_we_love" />
@@ -38,12 +52,12 @@ end
 
     <meta name="og:site_name" content="<%= og_title %>" />
     <meta name="og:description" content="<%= description %>" />
-    <meta name="og:image" content="http://paperswelove.org/images/PWLCONF-logo@2x.png">
-    <meta name="og:image:type" content="image/png">
-    <meta name="og:image:width" content="770">
-    <meta name="og:image:height" content="830">
+    <meta name="og:image" content="<%= og_image %>">
+    <meta name="og:image:type" content="<%= og_image_type %>">
+    <meta name="og:image:width" content="<%= og_width %>">
+    <meta name="og:image:height" content="<%= og_height %>">
     <meta name="og:locale" content="en_us">
-    <meta name="og:url" content="http://paperswelove.org/pwlconf2016/">
+    <meta name="og:url" content="http://pwlconf.org<%= current_page.url %>">
 
     <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
     <%= stylesheet_link_tag "pwlconf" %>

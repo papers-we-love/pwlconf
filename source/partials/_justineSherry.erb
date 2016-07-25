@@ -1,0 +1,40 @@
+<section class="speakerContainer">
+  <div class="speakerImage">
+    <a href="/justine-sherry">
+      <%= image_tag 'speakers/JustineSherry.png', :alt => "Justine Sherry", :title => "Justine Sherry", :class => "imgSpeaker" %>
+    </a>
+  </div>
+  <h1>Justine Sherry</h1>
+  <h2><a href="http://www.cs.cmu.edu/">Carnegie Mellon University</a></h2>
+
+  <% unless current_page.url == '/' %>
+  <ul class="speakerLinks">
+    <li><a href="http://www.justinesherry.com/">website</a></li>
+    <li><a href="https://twitter.com/justinesherry">@justinesherry</a>
+  </ul>
+
+  <h3>Referenced Papers</h3>
+  <ul class="referencedPapers">
+    <li>
+      <a href="http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf">
+        Design Philosophy of the Darpa Internet Protocols
+      </a>
+    </li>
+    <li>
+      <a href="http://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.txt">
+        End-to-End Arguments in System Design
+      </a>
+    </li>
+    <li>
+      <a href="http://david.choffnes.com/classes/cs4700fa14/papers/tussle.pdf">
+        Tussle in Cyberspace: Defining Tomorrow’s Internet
+      </a>
+    </li>
+  </ul>
+
+  <h3>Bio</h3>
+  <p>Justine Sherry is joining Carnegie Mellon University as an assistant professor in Fall 2017. Her interests are in computer networking; her work includes middleboxes, networked systems, measurement, cloud computing, and congestion control. Her recent research focuses on new opportunities and challenges arising from the deployment of middleboxes -- such as firewalls and proxies -- as services offered by clouds and ISPs. Justine received her PhD (2016) and MS (2012) from UC Berkeley, and her BS and BA (2010) from the University of Washington.</p>
+
+  <p>She is a recipient of the David J. Sakrison prize, paper awards at USENIX NSDI and ACM SIGCOMM, and an NSF Graduate Research Fellowship. Most importantly, she is always on the lookout for a great cappuccino.</p>
+  <% end %>
+</section>
