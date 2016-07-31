@@ -514,10 +514,10 @@ body {
 
   a.bronze {
     display: block;
-    height: 40px;
     text-align: center;
     margin: 2em 0;
     @include media($desktop) {
+      height: 40px;
       padding-right: 2em;
       margin-bottom: 4em;
       &:last-child {
@@ -558,7 +558,7 @@ body {
   }
 
   img.bronze {
-    width: 50%;
+    width: 60%;
     @include media($desktop) {
       width: 240px;
     }
@@ -567,31 +567,48 @@ body {
   img.additionalSponsor {
     margin: 1em 0;
     width: 180px;
-    display: block;
     @include media($desktop) {
       width: 180px;
     }
   }
 
   img.additionalSponsor.binary {
-    height: 90px;
-    width: 90px;
+    height: 140px;
+    width: 140px;
     @include media($desktop) {
-      height: 110px;
-      width: 110px;
+      height: 140px;
+      width: 140px;
       margin-top: 0;
     }
+  }
 
+  img.additionalSponsor.stickermule {
+    @include media($desktop) {
+      position: relative;
+      top: -25px;
+    }
   }
 
   div.additionalSponsorLogos {
-    padding: .5em 0;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    @include media($desktop) {
+      padding: .5em 0;
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
   div.bronzeSponsorLogos {
-    @extend div.additionalSponsorLogos;
+    @include media($desktop) {
+      padding: .5em 0;
+      display: flex;
+      justify-content: space-around;
+    }
     height: none;
   }
 
