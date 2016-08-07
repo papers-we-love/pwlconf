@@ -1,0 +1,23 @@
+<section class="speakerContainer">
+  <div class="speakerImage">
+    <a href="/casey-muratori">
+      <%= image_tag 'speakers/CaseyMuratori.png', :alt => "Casey Muratori", :title => "Casey Muratori", :class => "imgSpeaker" %>
+    </a>
+  </div>
+  <h1>Casey Muratori</h1>
+  <h2><a href="https://handmadehero.org/">Handmade Hero</a></h2>
+
+  <% unless current_page.url == '/' %>
+  <ul class="speakerLinks">
+    <li><a href="https://mollyrocket.com/games.html">website</a></li>
+    <li><a href="https://twitter.com/cmuratori">@cmuratori</a></li>
+  </ul>
+
+  <h3>Bio</h3>
+  <p>Casey is a lifetime software engineer, having learned to type about the same time he learned to write. He's been programming computers since he was seven years old, and still does at least one major software engineering project every year. Casey is now officially a “grumpy old man”, and you will often hear him complain about how the current generation of programmers has hardware that runs hundreds of times faster than what he grew up with, yet still writes software that runs at half the speed, or worse.</p>
+
+  <p>The most significant project he's created to date has been <a href="http://www.radgametools.com/granny.html">The Granny Animation SDK</a>, a complete animation pipeline system that first shipped in 1999 and which, 15 years later, still is in active use at many top-tier game studios. More recently, Casey worked with <a href="http://robertoconcerto.blogspot.com/">Jeff Roberts</a> and <a href="http://fgiesen.wordpress.com/">Fabian Giesen</a> to develop <a href="http://www.radgametools.com/bnkmain.htm">Bink 2</a>, RAD Game Tools’s next generation video compression technology, and he rewrote the movement system and helped extend the world editor for Jonathan Blow’s upcoming game <a href="http://the-witness.net/">The Witness</a>.</p>
+
+  <p>In November of 2014, Casey started the <a href="https://handmadehero.org/">Handmade Hero</a> project, a nightly live broadcast that aims to teach low-level game programming fundamentals to the next generation of game programmers. Casey has been shocked at how well it’s been received, and how far its spread throughout the programming world in such a short time.</p>
+  <% end %>
+</section>
