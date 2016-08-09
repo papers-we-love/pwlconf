@@ -1,0 +1,30 @@
+<section class="speakerContainer">
+  <div class="speakerImage">
+    <a href="/casey-muratori">
+      <%= image_tag 'speakers/CaseyMuratori.png', :alt => "Casey Muratori", :title => "Casey Muratori", :class => "imgSpeaker" %>
+    </a>
+  </div>
+  <h1>Casey Muratori</h1>
+  <h2><a href="https://mollyrocket.com/">Molly Rocket</a></h2>
+
+  <% unless current_page.url == '/' %>
+  <ul class="speakerLinks">
+    <li><a href="https://mollyrocket.com/casey/">website</a></li>
+    <li><a href="https://twitter.com/cmuratori">@cmuratori</a></li>
+  </ul>
+
+  <h3>Bio</h3>
+  <p>Casey Muratori is the host of <a href="https://handmadehero.org">Handmade Hero</a>,
+    an educational programming series, and the lead programmer at <a href="https://mollyrocket.com">Molly
+    Rocket</a> on <a href="https://molly1935.com">1935</a>, an
+    upcoming interactive narrative game about organized crime in 1930s New
+    York. His past projects include <a href="http://www.radgametools.com/granny.html">The Granny Animation
+    SDK</a>, <a href="http://www.radgametools.com/bnkmain.htm">Bink 2</a>, and <a href="http://the-witness.net">The Witness</a>.</p>
+
+  <p>Casey's past research contributions include the n-way linear
+    quaternion blend, the immediate mode graphical user interface (IMGUI),
+    and the first geometric optimizations for the Gilbert-Johnson-Keerthi
+    (GJK) algorithm. His current research interests include interactive
+    fiction, concurrent computing, and operating system architecture.</p>
+  <% end %>
+</section>
