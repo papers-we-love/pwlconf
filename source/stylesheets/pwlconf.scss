@@ -603,6 +603,16 @@ body {
     }
   }
 
+  div.donators {
+    text-align: center;
+    padding: 1em;
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   div.bronzeSponsorLogos {
     @include media($desktop) {
       padding: .5em 0;
