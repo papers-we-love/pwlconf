@@ -2,8 +2,8 @@
 title: About
 og_title: Papers We Love Conference 2016
 ---
-<article id="articleContainer" class="pageHome" itemscope itemtype="http://schema.org/Event">
-  <section class="articleTagline" itemprop="description">
+<article id="articleContainer" class="pageHome">
+  <section class="articleTagline">
     Join us for a day with some of Papers We Love’s favorite writers and speakers.
   </section>
   <%= partial 'partials/internalTopNav' %>
@@ -24,7 +24,7 @@ og_title: Papers We Love Conference 2016
       <div class="mastheadRow bottom">
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomLeft" %>
         <div class="mastheadLinks">
-          <span class="mastheadDates" itemprop="startDate" content="2016-09-15T09:00">September 15, 2016</span>
+          <span class="mastheadDates">September 15, 2016</span>
           <a href="https://ti.to/strange-loop/2016">Register at Strange Loop &rarr;</a>
         </div>
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomRight" %>
@@ -47,20 +47,20 @@ og_title: Papers We Love Conference 2016
   </section>
 
   <section class="articleVenueContent">
-    <div class="articleVenueRow" itemprop="location" itemscope itemtype="http://schema.org/Place">
-      <iframe title="Map to venue" itemprop="map" itemtype="https://schema.org/Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557794574!2d-90.20978604817624!3d38.629173979512835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel!5e0!3m2!1sen!2sus!4v1469380520055" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
+    <div class="articleVenueRow">
+      <iframe title="Map to venue" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557794574!2d-90.20978604817624!3d38.629173979512835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel!5e0!3m2!1sen!2sus!4v1469380520055" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
       <div class="venueInformation">
         <h2>Conference Location</h2>
         <p ><strong>September 15<sup>th</sup>, 2016</strong></p>
-        <span itemscope itemtype="http://schema.org/PostalAddress">
-          <p><a itemprop="url" href="http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html"><span itemprop="name">Union Station Doubletree</span></a></p>
-          <p><span itemprop="streetAddress">1820 Market St.</span></p>
+        <span>
+          <p><a  href="http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html"><span>Union Station Doubletree</span></a></p>
+          <p><span>1820 Market St.</span></p>
           <p>
-            <span itemprop="addressLocality">St. Louis</span>,
-            <span itemprop="addressRegion">MO</span>
-            <span itemprop="postalCode">63103</span>
+            <span>St. Louis</span>,
+            <span>MO</span>
+            <span>63103</span>
           </p>
-          <p><span itemprop="telephone">(314) 231-1234</span></p>
+          <p><span>(314) 231-1234</span></p>
         </span>
         <p class="button">
           <a href="https://ti.to/strange-loop/2016">Buy tickets @ Strange Loop</a>
@@ -114,13 +114,13 @@ og_title: Papers We Love Conference 2016
 
   <section class="articleSponsorContent">
     <div class="articleSponsorRow">
-      <span itemprop="sponsor" itemtype="http://schema.org/Organization">
-        <a itemprop="url" href="http://corporate.comcast.com/">
+      <span>
+        <a href="http://corporate.comcast.com/">
           <%= image_tag 'comcast.png', :alt => "Comcast", :title => "Comcast - a platinum sponsor of PWLConf", :class => 'comcast' %>
         </a>
       </span>
-      <span itemprop="sponsor" itemtype="http://schema.org/Organization">
-        <a itemprop="url" href="https://www.twosigma.com">
+      <span>
+        <a href="https://www.twosigma.com">
           <%= image_tag 'TwoSigma_RGB.jpg', :alt => "TwoSigma", :title => "TwoSigma - a platinum sponsor of PWLConf", :class => 'twosigma'  %>
         </a>
       </span>

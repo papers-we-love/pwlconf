@@ -73,8 +73,8 @@ end
   	ga('send', 'pageview');
     </script>
   </head>
-  <body id="generic" itemscope itemtype="http://schema.org/WebPage">
-    <div id="main" role="main" itemprop="mainContentOfPage">
+  <body>
+    <div id="main" role="main">
       <%= yield %>
     </div>
     <script>
@@ -95,6 +95,72 @@ end
        "Copyright (c) 2016 Papers We Love LLC, all rights reserved"
      ];
      console.log(a.join("\n"));
+    </script>
+    <script type="application/ld+json">
+     {
+       "@context": "http://schema.org/",
+       "@type": "WebPage",
+       "name": "<%= og_title %>",
+       "description": "<%= description %>",
+       "image": "<%= og_image %>",
+       "publisher": {
+         "@type": "Organization",
+         "name": "Papers We Love",
+         "url": "http://paperswelove.org"
+       }
+     }
+    </script>
+    <script type="application/ld+json">
+     {
+      "@context": "http://schema.org/",
+       "@type": "Event",
+       "name": "PWLConf 2016",
+       "url": "http://pwlconf.org",
+       "startDate": "2016-09-15T09:00",
+       "endDate": "2016-09-15T09:00",
+       "description": "Papers We Love Conference 2016",
+       "image": "http://pwlconf.org/images/PWLCONF-logo@2x.png",
+       "performer": [
+         {
+           "@type": "Person",
+           "name": "Claire Le Goues"
+         },
+         {
+           "@type": "Person",
+           "name": "Dahlia Malkhi"
+         },
+         {
+           "@type": "Person",
+           "name": "Casey Muratori"
+         },
+         {
+           "@type": "Person",
+           "name": "Justine Sherry"
+         },
+         {
+           "@type": "Person",
+           "name": "Mariuz Watz"
+         },
+         {
+           "@type": "Person",
+           "name": "Nobuko Yoshida"
+         }
+       ],
+       "location": {
+         "@type": "Place",
+         "name": "Union Station Doubletree",
+         "url": "http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html",
+         "address": {
+           "@type": "PostalAddress",
+           "addressLocality": "St. Louis",
+           "addressRegion": "MO",
+           "streetAddress": "1820 Market St.",
+           "postalCode": "63103",
+           "telephone": "314-231-1234"
+         },
+         "hasMap": "https://www.google.com/maps/place/St.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel/data=!4m2!3m1!1s0x87d8b31de5f5865d:0xa0a4a4e039774dd1?gl=US&hl=en"
+       }
+     }
     </script>
   </body>
 </html>
