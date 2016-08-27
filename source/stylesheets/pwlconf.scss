@@ -252,6 +252,80 @@ body {
   }
 }
 
+// ==============
+// Agenda Content
+// ==============
+
+.articleAgendaContent {
+  border-top: $color-lightblue 1px solid;
+  background: $color-white;
+  color: $color-text;
+  padding: 2em;
+  @include media($desktop) {
+    padding: 2em 5em;
+  }
+
+  h2 {
+    color: $color-mediumblue;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: center;
+    margin: 0.5em 0 2em 0;
+    @include media($desktop) {
+      margin: 1em 0 2em 0;
+    }
+  }
+
+  dl {
+    margin: 1px 0 1px 0;
+    @include media($desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    dt {
+      color: $color-mediumblue;
+      padding: 1em 1.2em .5em 1.2em;
+      text-align: center;
+      border-top: #eee 1px solid;
+      @include media($desktop) {
+        color: $color-text;
+        padding: 1em 1.2em;
+        width: 150px;
+        background-color: lighten($color-lightblue, 10);
+      }
+    }
+
+    dd {
+      padding: .5em 1.2em 1em 1.2em;
+      text-align: center;
+      @include media($desktop) {
+        padding: 1em 1.2em;
+        width: 200px;
+        text-align: left;
+      }
+      &.speaker {
+        font-weight: bold;
+      }
+      a {
+        color: $color-darkblue;
+        &:hover {
+          color: $color-pink;
+        }
+      }
+    }
+  }
+
+  p.agendaParty {
+    margin-top: 1em;
+    border: $color-lightblue 1px solid;
+    padding: 1em;
+    text-align: center;
+  }
+
+}
+
 // ===============
 // Speaker Content
 // ===============
