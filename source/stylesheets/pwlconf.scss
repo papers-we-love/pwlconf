@@ -265,6 +265,13 @@ body {
     padding: 0;
   }
 
+  a {
+    color: $color-darkblue;
+    &:hover {
+      color: $color-pink;
+    }
+  }
+
   h2 {
     color: $color-mediumblue;
     text-transform: uppercase;
@@ -324,27 +331,26 @@ body {
       &.speaker {
         font-weight: bold;
       }
-      a {
-        color: $color-darkblue;
-        &:hover {
-          color: $color-pink;
-        }
-      }
     }
   }
 
   div.agendaFooter {
      @include span-columns(4);
-  }
 
-  p.agendaParty {
-    border: $color-lightblue 1px solid;
-    padding: 1em;
-    text-align: center;
-    margin: 1em;
-    @include media($desktop) {
-      margin: 2em;
-    }
+     p {
+       padding: 1em;
+       text-align: center;
+       margin: 1em;
+       @include media($desktop) {
+           margin: 2em;
+       }
+       &.agendaParty {
+         border: $color-lightblue 1px solid;
+       }
+       &.agendaNote {
+         font-size: 0.9em;
+       }
+     }
   }
 
 }
