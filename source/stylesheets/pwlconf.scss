@@ -332,6 +332,11 @@ body {
         font-weight: bold;
       }
     }
+
+    span.food {
+      display: block;
+      font-size: 0.7em;
+    }
   }
 
   div.agendaFooter {
@@ -349,6 +354,7 @@ body {
        }
        &.agendaNote {
          font-size: 0.9em;
+         line-height: 160%;
        }
      }
   }
