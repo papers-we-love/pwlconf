@@ -334,7 +334,8 @@ body {
     }
 
     span.food {
-        font-size: 0.7em;
+      display: block;
+      font-size: 0.7em;
     }
   }
 
@@ -353,6 +354,7 @@ body {
        }
        &.agendaNote {
          font-size: 0.9em;
+         line-height: 160%;
        }
      }
   }
