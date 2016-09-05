@@ -1094,3 +1094,17 @@ body {
 
   }
 }
+
+ol.footnotes {
+  margin: 2em;
+
+  li {
+    font-size: .8em;
+    font-weight: bold;
+    font-style: italic;
+    p {
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+}
