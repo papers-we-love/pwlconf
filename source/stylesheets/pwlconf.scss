@@ -285,15 +285,7 @@ body {
   }
 
   div.conferenceAgenda {
-    @include media($desktop) {
-      @include span-columns(2 of 4);
-    }
-  }
 
-  div.lastCol {
-    @include media($desktop) {
-      @include omega();
-    }
   }
 
   dl {
@@ -316,6 +308,7 @@ body {
         padding: 1em 1em;
         width: 140px;
         background-color: lighten($color-lightblue, 10);
+        border-top: #fff 1px solid;
       }
     }
 
@@ -325,11 +318,22 @@ body {
       @include media($desktop) {
         padding: 1em 0;
         margin-left: 1em;
-        width: 150px;
+        width: 500px;
         text-align: left;
       }
       &.speaker {
         font-weight: bold;
+      }
+      a {
+        text-decoration: none;
+      }
+      h3 {
+        font-weight: normal;
+        color: lighten($color-darkblue, 20);
+        margin-bottom: 5px;
+        &:hover {
+          color: $color-pink;
+        }
       }
     }
 
