@@ -6,6 +6,12 @@ og_title = 'Papers We Love Conference 2016'
 og_width = 770
 og_height = 830
 og_image_type = 'image/png'
+og_video = nil
+og_video_title = nil
+og_video_url = nil
+og_video_date = '09/15/2016'
+og_video_uploaddate = '09/15/2016'
+og_video_author = 'Papers We Love'
 
 unless current_page.data.title.nil?
   title = "#{title} | #{current_page.data.title}"
@@ -27,6 +33,22 @@ end
 
 unless current_page.data.og_image_type.nil?
   og_image_type = current_page.data.og_image_type
+end
+
+unless current_page.data.og_video.nil?
+  og_video = true
+  og_video_title = current_page.data.og_video_title
+  og_video_url = current_page.data.og_video_url
+  og_video_description = current_page.data.og_video_description
+  og_video_thumbnail = current_page.data.og_video_thumbnail
+end
+
+unless current_page.data.og_video_date.nil?
+  og_video_date = current_page.data.og_video_date
+end
+
+unless current_page.data.og_video_author.nil?
+  og_video_author = current_page.data.og_video_author
 end
 %>
 <!doctype html>
@@ -107,7 +129,21 @@ end
          "@type": "Organization",
          "name": "Papers We Love",
          "url": "http://paperswelove.org"
-       }
+       }<% unless og_video.nil? %>,
+       "video": {
+         "@context": "http://schema.org/",
+         "@type": "VideoObject",
+         "name": "<%= og_video_title %>",
+         "@id": "<%= og_video_url %>",
+         "datePublished": "<%= og_video_date %>",
+         "uploadDate": "<%= og_video_uploaddate %>",
+         "description": "<%= og_video_description %>",
+         "thumbnailUrl": "<%= og_video_thumbnail %>",
+         "author": {
+           "@type": "Person",
+           "name": "<%= og_video_author %>"
+         }
+       }<% end %>
      }
     </script>
     <script type="application/ld+json">
