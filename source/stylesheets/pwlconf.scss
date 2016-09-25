@@ -930,6 +930,11 @@ body {
 .speakerContainer {
   @extend .articleTextContent;
 
+  .photoCaption {
+    text-align: right;
+    font-size: 12px;
+  }
+
   .speakerImage {
     text-align: center;
   }
