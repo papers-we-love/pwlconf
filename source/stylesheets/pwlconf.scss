@@ -53,7 +53,17 @@ body {
   @include media($desktop) {
     display: block;
   }
+
+  a {
+    color: #fff;
+  }
 }
+
+.photoCaption {
+  text-align: right;
+  font-size: 12px;
+}
+
 
 // ========
 // Masthead
@@ -364,6 +374,36 @@ body {
   }
 
 }
+
+// =============
+// Video Content
+// =============
+
+.articleVideoContent {
+  background: $color-white;
+  color: $color-text;
+
+  iframe {
+    width: 100%;
+    height: 210px;
+    @include media($desktop) {
+      height: 457px;
+    }
+  }
+}
+
+.speakerContainer {
+  .articleVideoContent {
+    margin-bottom: 2em;
+
+    iframe {
+      @include media($desktop) {
+        height: 366px;
+      }
+    }
+  }
+}
+
 
 // ===============
 // Speaker Content
