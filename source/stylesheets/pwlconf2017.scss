@@ -12,6 +12,7 @@ $mobile: new-breakpoint(max-width 500px 4);
 @import "neat";
 @import "fonts";
 @import "reset";
+@import "font-awesome/font-awesome";
 
 $sans: 'Helvetica Neue', helvetica, arial, sans;
 $serif: 'Computer Modern Serif', 'Palatino', Georgia, Times, serif;
@@ -829,25 +830,23 @@ body {
 // ===============
 
 .articleFooterContent {
-  background: $color-white;
+  background: $color-darkblue;
   border-top: $color-mediumblue 1px solid;
 }
 
 .footerRow {
-  padding: 2em;
-  text-align: center;
+  padding: 2em 1em;
+//  text-align: center;
 
   h2 {
     font-weight: normal;
     font-size: 1.1em;
-    text-transform: uppercase;
-    color: darken($color-mediumblue, 14);
     margin: 0 0 .6em 0;
   }
 
   a {
     font-size: 1em;
-    color: $color-darkblue;
+    color: $color-lightblue;
     &:hover {
       color: $color-pink;
     }
@@ -855,15 +854,29 @@ body {
 
   .footerItem {
     margin-bottom: 2em;
+
+    .footerItemLabel {
+      padding-left: 1em;
+      position: relative;
+      top: 2px;
+      color: $color-lightblue;
+    }
   }
 
   @include media($desktop) {
     display: flex;
-    justify-content: space-between;
-    padding: 2em 5em;
+
+    h2 {
+
+    }
 
     .footerItem {
       margin-bottom: 1em;
+      margin-right: 2em;
+
+      .footerItemLabel {
+        display: none;
+      }
     }
   }
 }
