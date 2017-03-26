@@ -1,0 +1,223 @@
+<%
+description = 'September 15, 2016 in St. Louis, Missouri'
+title = 'PWLConf 2016'
+og_image = 'http://pwlconf.org/images/PWLCONF-logo@2x.png'
+og_title = 'Papers We Love Conference 2016'
+og_width = 770
+og_height = 830
+og_image_type = 'image/png'
+og_video = nil
+og_video_title = nil
+og_video_url = nil
+og_video_date = '09/15/2016'
+og_video_uploaddate = '09/15/2016'
+og_video_author = 'Papers We Love'
+
+unless current_page.data.title.nil?
+  title = "#{title} | #{current_page.data.title}"
+end
+
+unless current_page.data.og_title.nil?
+  og_title = current_page.data.og_title
+end
+
+unless current_page.data.description.nil?
+  description = current_page.data.description
+end
+
+unless current_page.data.og_image.nil?
+  og_width = current_page.data.og_width
+  og_height = current_page.data.og_height
+  og_image = current_page.data.og_image
+end
+
+unless current_page.data.og_image_type.nil?
+  og_image_type = current_page.data.og_image_type
+end
+
+unless current_page.data.og_video.nil?
+  og_video = true
+  og_video_title = current_page.data.og_video_title
+  og_video_url = current_page.data.og_video_url
+  og_video_description = current_page.data.og_video_description
+  og_video_thumbnail = current_page.data.og_video_thumbnail
+end
+
+unless current_page.data.og_video_date.nil?
+  og_video_date = current_page.data.og_video_date
+end
+
+unless current_page.data.og_video_author.nil?
+  og_video_author = current_page.data.og_video_author
+end
+%>
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta content="width=device-width" name="viewport">
+
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+
+    <meta name="fb:description" content="<%= description %>" />
+    <meta name="fb:image" content="<%= og_image %>">
+    <meta name="fb:image:type" content="<%= og_image_type %>">
+    <meta name="fb:image:width" content="<%= og_width %>">
+    <meta name="fb:image:height" content="<%= og_height %>">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@papers_we_love" />
+    <meta name="twitter:title" content="<%= og_title %>" />
+    <meta name="twitter:description" content="<%= description %>" />
+
+    <meta name="og:site_name" content="<%= og_title %>" />
+    <meta name="og:description" content="<%= description %>" />
+    <meta name="og:image" content="<%= og_image %>">
+    <meta name="og:image:type" content="<%= og_image_type %>">
+    <meta name="og:image:width" content="<%= og_width %>">
+    <meta name="og:image:height" content="<%= og_height %>">
+    <meta name="og:locale" content="en_us">
+    <meta name="og:url" content="http://pwlconf.org<%= current_page.url %>">
+
+    <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+    <%= stylesheet_link_tag "pwlconf2016" %>
+    <%= favicon_tag 'favicon.ico' %>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-53240153-2', 'auto');
+  	ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="main" role="main">
+      <%= yield %>
+    </div>
+    <script>
+     var a = [
+      "   ___  __    __  __    ___             __   ____   ___  _  __   ",
+      "  / _ \\/ / /\\ \\ \\/ /   / __\\___  _ __  / _| |___ \\ / _ \\/ |/ /_  ",
+      " / /_)/\\ \\/  \\/ / /   / /  / _ \\| '_ \\| |_    __) | | | | | '_ \\ ",
+      "/ ___/  \\  /\\  / /___/ /__| (_) | | | |  _|  / __/| |_| | | (_) |",
+      "\\/       \\/  \\/\\____/\\____/\\___/|_| |_|_|   |_____|\\___/|_|\\___/ ",
+      " ",
+      "Brought to you by Papers We Love - http://paperswelove.org/",
+      " ",
+       "Site design courtesy of https://twitter.com/jessicaspacekat",
+       "HTML and all that jazz banged out by https://twitter.com/d_run",
+       "With the assistance and forbearance of https://twitter.com/alazyreader",
+       " ",
+       "The Papers We Love logo, site content and design is",
+       "Copyright (c) 2016 Papers We Love LLC, all rights reserved"
+     ];
+     console.log(a.join("\n"));
+    </script>
+    <script type="application/ld+json">
+     {
+       "@context": "http://schema.org/",
+       "@type": "WebPage",
+       "name": "<%= og_title %>",
+       "description": "<%= description %>",
+       "image": "<%= og_image %>",
+       "publisher": {
+         "@type": "Organization",
+         "name": "Papers We Love",
+         "url": "http://paperswelove.org"
+       }<% unless og_video.nil? %>,
+       "video": {
+         "@context": "http://schema.org/",
+         "@type": "VideoObject",
+         "name": "<%= og_video_title %>",
+         "@id": "<%= og_video_url %>",
+         "datePublished": "<%= og_video_date %>",
+         "uploadDate": "<%= og_video_uploaddate %>",
+         "description": "<%= og_video_description %>",
+         "thumbnailUrl": "<%= og_video_thumbnail %>",
+         "author": {
+           "@type": "Person",
+           "name": "<%= og_video_author %>"
+         }
+       }<% end %>
+     }
+    </script>
+    <script type="application/ld+json">
+     {
+      "@context": "http://schema.org/",
+       "@type": "Event",
+       "name": "PWLConf 2016",
+       "url": "http://pwlconf.org",
+       "startDate": "2016-09-15T09:00",
+       "endDate": "2016-09-15T09:00",
+       "description": "Papers We Love Conference 2016",
+       "image": "http://pwlconf.org/images/PWLCONF-logo@2x.png",
+       "performer": [
+         {
+           "@type": "Person",
+           "name": "Claire Le Goues"
+         },
+         {
+           "@type": "Person",
+           "name": "Dahlia Malkhi"
+         },
+         {
+           "@type": "Person",
+           "name": "Casey Muratori"
+         },
+         {
+           "@type": "Person",
+           "name": "Justine Sherry"
+         },
+         {
+           "@type": "Person",
+           "name": "Mariuz Watz"
+         },
+         {
+           "@type": "Person",
+           "name": "Nobuko Yoshida"
+         }
+       ],
+       "location": {
+         "@type": "Place",
+         "name": "Union Station Doubletree",
+         "url": "http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html",
+         "address": {
+           "@type": "PostalAddress",
+           "addressLocality": "St. Louis",
+           "addressRegion": "MO",
+           "streetAddress": "1820 Market St.",
+           "postalCode": "63103",
+           "telephone": "314-231-1234"
+         },
+         "hasMap": "https://www.google.com/maps/place/St.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel/data=!4m2!3m1!1s0x87d8b31de5f5865d:0xa0a4a4e039774dd1?gl=US&hl=en"
+       }
+     }
+    </script>
+  </body>
+</html>
+<!--
+       _____     ___          ___
+     _/ ____\   /  / ___  ___ \  \      ______  ___  ___
+     \   __\   /  /  \  \/  /  \  \    /_____/  \  \/  /
+      |  |    (  (    >    <    )  )   /_____/   >    <
+      |__|     \  \  /__/\_ \  /  /             /__/\_ \
+                \__\       \/ /__/                    \/
+
+
+     Papers We Love Conference 2016
+
+     Brought to you by the fine folks at http://paperswelove.org
+
+     Logo and site design courtesy of https://twitter.com/jessicaspacekat
+     HTML and all that jazz banged out by https://twitter.com/d_run
+     With the assistance and forbearance of https://twitter.com/alazyreader
+
+     The Papers We Love logo, site content and design is
+     Copyright (c) <%= Date.today.year %> Papers We Love LLC, all rights reserved
+
+ -->

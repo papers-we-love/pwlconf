@@ -23,6 +23,10 @@ $color-white: #fff;
 $color-text: #6B6B6B;
 $color-pink: #F605C9;
 
+$color-darkgray: desaturate($color-darkblue, 100);
+$color-mediumgray: desaturate($color-mediumblue, 100);
+$color-lightgray: desaturate($color-lightblue, 100);
+
 html {
   background: $color-darkblue;
   font-family: $sans;
@@ -1151,4 +1155,40 @@ ol.footnotes {
       font-style: normal;
     }
   }
+}
+
+// ===================
+// Prospectus Content
+// ===================
+
+.articleSponsorOpp {
+  @extend .articleTextContent;
+  padding-top: 0;
+  @include media($desktop) {
+    padding-top: 0;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    padding-bottom: 1em;
+    border-bottom: $color-mediumblue 1px solid;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 8px;
+
+    span {
+      color: $color-mediumgray;
+      font-weight: normal;
+    }
+  }
+
+  p {
+    strong {
+      color: $color-darkblue !important;
+    }
+  }
+
+
 }
