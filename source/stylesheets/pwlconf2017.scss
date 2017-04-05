@@ -863,8 +863,15 @@ body {
     }
   }
 
+  .previousConfs {
+    span {
+      display: none;
+    }
+  }
+
   @include media($desktop) {
     display: flex;
+    padding-right: 0;
 
     h2 {
 
@@ -877,6 +884,21 @@ body {
       .footerItemLabel {
         display: none;
       }
+    }
+
+    .previousConfs {
+      margin-right: 1em;
+      text-align: right;
+      flex-grow: 2;
+      color: $color-mediumblue;
+
+      span {
+        display: inline;
+      }
+
+      h2 {
+        display: inline-block;
+      };
     }
   }
 }
