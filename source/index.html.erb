@@ -1,12 +1,12 @@
 ---
 title: Home
-og_title: Papers We Love Conference 2016
+og_title: Papers We Love Conference 2017
 ---
 <article id="articleContainer" class="pageHome">
   <section class="articleTagline">
     Join us for a day with some of Papers We Love’s favorite writers and speakers.
   </section>
-  <%= partial 'partials/internalTopNav' %>
+  <%= partial '2017/partials/internalTopNav' %>
   <section class="articleMasthead">
     <div class="articleMastheadContent">
       <div class="mastheadRow top">
@@ -17,44 +17,44 @@ og_title: Papers We Love Conference 2016
 
       <div class="mastheadRow">
         <span class="mastheadCity">St. Louis</span>
-        <%= image_tag 'conf_logo_b.svg', :alt => "PWLConf 2016", :title => "Papers We Love Conference 2016", :class => "imgPwlConfLogo" %>
+        <%= image_tag 'pwl-conf-2017.svg', :alt => "PWLConf 2017", :title => "Papers We Love Conference 2017", :class => "imgPwlConfLogo" %>
         <span class="mastheadState">Missouri</span>
       </div>
 
       <div class="mastheadRow bottom">
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomLeft" %>
         <div class="mastheadLinks">
-          <span class="mastheadDates">September 15, 2016</span>
+          <span class="mastheadDates">September 28, 2017</span>
         </div>
         <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomRight" %>
       </div>
     </div>
   </section>
 
-  <section class="articleVideoContent">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShwIXMA5P3WR_9LgBOAdvw4" frameborder="0" allowfullscreen></iframe>
+  <section class="articlePhotoContent">
+    <%= image_tag 'L1040634_mod2.jpg', :alt => "Basho", :title => "Basho - 2016 Sponsor of PWLConf", :class => "photoBernstein" %>
+    <div class="photoCaption">
+      <h3>&nbsp;</h3>
+      <a href="/2016/claire-legoues">Claire Le Goues</a> @ PWLConf 2016
+    </div>
   </section>
 
-  <section class="articleSpeakerContent">
-    <h2>Conference Speakers</h2>
-    <div class="homeSpeakers">
-      <%= partial 'partials/claireLeGoues' %>
-      <%= partial 'partials/dahliaMalkhi' %>
-      <%= partial 'partials/caseyMuratori' %>
-    </div>
-    <div class="homeSpeakers">
-      <%= partial 'partials/justineSherry' %>
-      <%= partial 'partials/mariusWatz' %>
-      <%= partial 'partials/nobukoYoshida' %>
-    </div>
+  <section class="articleTextContent">
+    <h2>Papers We Love Conference 2017</h2>
+    <h1>We're ready for 2017!</h1>
+    <p><a href="/2016/">Papers We Love 2016</a> was a great success and we'd like to thank all of our speakers and all of you who made it such a great conference.</p>
+    <p>We're putting together another line-up of amazing speakers for 2017 and hope to see you in St. Louis in conjunction with <a href="https://thestrangeloop.com/">Strange Loop</a>.</p>
+
+    </p>We'll be posting more information here very soon, so stay tuned. In the meantime you can <a href="http://papersweloveslack.herokuapp.com/">join the Papers We Love Slack</a> to keep up with the latest developments. If you or your company is <a href="/2017/prospectus/">interested in sponsoring PWLConf 2017</a> please <a href="mailto:contact@paperswelove.org">contact us</a>.</p>
   </section>
+
 
   <section class="articleVenueContent">
     <div class="articleVenueRow">
       <iframe title="Map to venue" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557794574!2d-90.20978604817624!3d38.629173979512835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel!5e0!3m2!1sen!2sus!4v1469380520055" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
       <div class="venueInformation">
         <h2>Conference Location</h2>
-        <p ><strong>September 15<sup>th</sup>, 2016</strong></p>
+        <p ><strong>September 28<sup>th</sup>, 2017</strong></p>
         <span>
           <p><a  href="http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html"><span>Union Station Doubletree</span></a></p>
           <p><span>1820 Market St.</span></p>
@@ -72,95 +72,5 @@ og_title: Papers We Love Conference 2016
     </div>
   </section>
 
-  <section class="articleAgendaContent">
-    <h2>Conference Agenda</h2>
-
-    <div class="conferenceAgenda">
-      <dl>
-        <dt>9:00 - 9:10</dt>
-        <dd>Opening Notes</dd>
-
-        <dt>9:10 - 10:10</dt>
-        <dd class="speaker">
-          <a href="dahlia-malkhi">
-            <h3>Randomized Gossip Methods</h3>
-            Dahlia Malkhi
-          </a>
-        </dd>
-
-        <dt>10:15 - 11:15</dt>
-        <dd class="speaker">
-          <a href="nobuko-yoshida">
-            <h3>Multiparty Session Types and their Applications to Concurrent and Distributed Systems</h3>
-            Nobuko Yoshida
-          </a>
-        </dd>
-
-        <dt>11:15 - 12:45</dt>
-        <dd><em>Lunch*</em> <span class="food"></span></dd>
-
-        <dt>12:45 - 1:45</dt>
-        <dd class="speaker">
-          <a href="marius-watz">
-            <h3>Abuse Of An Algorithm Comes As No Surprise</h3>
-            Marius Watz
-          </a>
-        </dd>
-
-        <dt>1:50 - 2:50</dt>
-        <dd class="speaker">
-          <a href="/claire-legoues">
-            <h3>Automatic Patch Generation</h3>
-            Claire Le Goues
-          </a>
-        </dd>
-
-        <dt>2:55 - 3:25</dt>
-        <dd><em>Snack Break*</em></dd>
-
-        <dt>3:25 - 4:25</dt>
-        <dd class="speaker">
-          <a href="justine-sherry">
-            <h3>Design Philosophy in Networked Systems</h3>
-            Justine Sherry
-          </a>
-        </dd>
-
-        <dt>4:30 - 5:30</dt>
-        <dd class="speaker">
-          <a href="casey-muratori">
-            <h3>Papers I Have Loved</h3>
-            Casey Muratori
-          </a>
-        </dd>
-
-        <dt>5:30 - 5:35</dt>
-        <dd>Closing Notes</dd>
-      </dl>
-    </div>
-
-    <div class="agendaFooter">
-      <p class="agendaParty"><strong>7:00 - 9:30</strong> <a href="http://www.thestrangeloop.com/2016/strange-loop-party.html">Strange Loop Party</a> at the <a href="http://www.citymuseum.org/">City Museum</a> - <a href="http://bit.ly/2bulhvO">750 N 16th St</a></p>
-      <p class="agendaNote"><em>*Lunch and Snacks are provided by PWLConf and will be <a href="http://bit.ly/2c0tMR1">located outside the venue on 20th St.</a></em> <br /> Lunch provided by <a href="http://www.guerrillastreetfood.com/">Guerilla Street Food</a><br /> Snack provided by <a href="http://www.clementinescreamery.com/">Clementine's Creamery</a></p>
-    </div>
-  </section>
-
-  <section class="articleSponsorContent">
-    <div class="articleSponsorRow">
-      <span>
-        <a href="http://corporate.comcast.com/">
-          <%= image_tag 'comcast.png', :alt => "Comcast", :title => "Comcast - a platinum sponsor of PWLConf", :class => 'comcast' %>
-        </a>
-      </span>
-      <span>
-        <a href="https://www.twosigma.com">
-          <%= image_tag 'TwoSigma_RGB.jpg', :alt => "TwoSigma", :title => "TwoSigma - a platinum sponsor of PWLConf", :class => 'twosigma'  %>
-        </a>
-      </span>
-    </div>
-    <div class="photoCaption map">
-      Two Sigma and Comcast are Platinum Sponsors of PWLConf 2016</a>
-    </div>
-  </section>
-  <%= partial 'partials/footer' %>
+  <%= partial '2017/partials/footer' %>
 </article>

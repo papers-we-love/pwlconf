@@ -1,0 +1,48 @@
+<section class="speakerContainer">
+  <div class="speakerImage">
+    <a href="/2016/claire-legoues">
+      <%= image_tag 'speakers/ClaireLeGoues.png', :alt => "Claire Le Goues", :title => "Claire Le Goues", :class => "imgSpeaker" %>
+    </a>
+  </div>
+  <h1>Claire Le Goues</h1>
+  <h2><a href="http://www.cs.cmu.edu/">Carnegie Mellon University</a></h2>
+
+  <% unless current_page.url == '/2016/' %>
+    <ul class="speakerLinks">
+      <li><a href="https://clairelegoues.com/">website</a></li>
+      <li><a href="https://twitter.com/clegoues">@clegoues</a>
+    </ul>
+
+    <section class="articleVideoContent">
+      <iframe src="https://www.youtube.com/embed/sRkfMe0_5cA" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <script async class="speakerdeck-embed" data-id="14d1410c85804941a03e51f38842bd71" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+    <h3>Automatic Patch Generation</h3>
+    <p>Research in automated program patching seeks to improve programs by, e.g., fixing bugs, porting functionality, or improving non-functional properties. The past eight years have seen a rapid expansion of techniques proposed and evaluated in this space.</p>
+    <p>In this talk I will discuss the progression of the area of automated bug repair in particular. I will especially focus on the key challenge of assuring, measuring, and reasoning about the quality of bug-fixing patches. Most such techniques, whether heuristic or semantic, rely on test cases to validate transformation correctness, in the absence of formal correctness specifications, but otherwise vary in the way they construct candidate patches and traverse the infinite space of possibilities. I will outline recent results on the relationship between test suite quality and origin and output quality, with observations about both semantic and heuristic approaches. I will conclude with a discussion of potentially promising future directions and open questions.</p>
+    <p><a href="https://clairelegoues.com/2016/09/16/my-original-pwlconf-reading-list-on-patch-generation/">Read Claire's blog post about Automatic Patch Generation.</a></p>
+
+    <h3>Referenced Papers</h3>
+    <ul class="referencedPapers">
+      <li>
+        <a href="https://www.cs.virginia.edu/~weimer/p/p109-weimer.pdf">Automatic Program Repair with Evolutionary Computation</a>
+      </li>
+      <li>
+        <a href="https://www.comp.nus.edu.sg/~abhik/pdf/ICSE16-angelix.pdf">Angelix: scalable multiline program patch synthesis via symbolic analysis</a>
+      </li>
+      <li>
+        <a href="http://people.cs.umass.edu/~brun/pubs/pubs/Ke15ase.pdf">Repairing Programs with Semantic Code Search</a>
+      </li>
+    </ul>
+
+    <img src="/images/STL_1189.jpg" alt="Claire Le Goues" />
+    <div class="photoCaption">Photo credit: <a href="https://twitter.com/michaelbridge">Mike Bridge</a></div>
+
+    <h3>Bio</h3>
+    <p>Claire Le Goues is an Assistant Professor in the School of Computer Science at Carnegie Mellon University, primarily affiliated with the Institute for Software Research. Her research interests span software engineering and programming languages, and especially in how to construct, maintain, evolve, improve/debug, and assure high-quality software systems.  She is passionate about the education and training of both software engineering practitioners and researchers, from all backgrounds and walks of life.</p>
+
+    <p>Claire has an MS and PhD from the University of Virginia and a BA from Harvard College, all in Computer Science. She worked (briefly!) as a software engineer before graduate school, exposure which gave her a taste for techniques and analyses that scale to the complexities of Real Software.</p>
+  <% end %>
+</section>

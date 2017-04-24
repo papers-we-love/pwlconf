@@ -17,8 +17,16 @@ Time.zone = "UTC"
 #   page "/admin/*"
 # end
 
-with_layout :pwlconf do
-  page "*"
+with_layout :pwlconf2016 do
+  page "/2016/*"
+end
+
+with_layout :pwlconf2017 do
+  page "/2017/*"
+end
+
+with_layout :pwlconf2017 do
+  page "/"
 end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
