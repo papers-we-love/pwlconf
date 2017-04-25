@@ -56,7 +56,7 @@ end
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <meta content="width=device-width" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <title><%= title %></title>
     <meta name="description" content="<%= description %>" />
@@ -86,14 +86,18 @@ end
     <%= favicon_tag 'favicon.ico' %>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script>
-  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-53240153-2', 'auto');
-  	ga('send', 'pageview');
+     ga('create', 'UA-53240153-2', 'auto');
+  	 ga('send', 'pageview');
     </script>
+    <script
+      src="http://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="main" role="main">
@@ -113,65 +117,66 @@ end
      console.log(a.join("\n"));
     </script>
     <script type="application/ld+json">
-     {
-       "@context": "http://schema.org/",
-       "@type": "WebPage",
-       "name": "<%= og_title %>",
-       "description": "<%= description %>",
-       "image": "<%= og_image %>",
-       "publisher": {
-         "@type": "Organization",
-         "name": "Papers We Love",
-         "url": "http://paperswelove.org"
-       }<% unless og_video.nil? %>,
-       "video": {
-         "@context": "http://schema.org/",
-         "@type": "VideoObject",
-         "name": "<%= og_video_title %>",
-         "@id": "<%= og_video_url %>",
-         "datePublished": "<%= og_video_date %>",
-         "uploadDate": "<%= og_video_uploaddate %>",
-         "description": "<%= og_video_description %>",
-         "thumbnailUrl": "<%= og_video_thumbnail %>",
-         "author": {
-           "@type": "Person",
-           "name": "<%= og_video_author %>"
-         }
-       }<% end %>
-     }
+      {
+      "@context": "http://schema.org/",
+      "@type": "WebPage",
+      "name": "<%= og_title %>",
+      "description": "<%= description %>",
+      "image": "<%= og_image %>",
+      "publisher": {
+      "@type": "Organization",
+      "name": "Papers We Love",
+      "url": "http://paperswelove.org"
+      }<% unless og_video.nil? %>,
+      "video": {
+      "@context": "http://schema.org/",
+      "@type": "VideoObject",
+      "name": "<%= og_video_title %>",
+      "@id": "<%= og_video_url %>",
+      "datePublished": "<%= og_video_date %>",
+      "uploadDate": "<%= og_video_uploaddate %>",
+      "description": "<%= og_video_description %>",
+      "thumbnailUrl": "<%= og_video_thumbnail %>",
+      "author": {
+      "@type": "Person",
+      "name": "<%= og_video_author %>"
+      }
+      }<% end %>
+      }
     </script>
     <script type="application/ld+json">
-     {
-       "@context": "http://schema.org/",
-       "@type": "Event",
-       "name": "PWLConf 2017",
-       "url": "http://pwlconf.org",
-       "startDate": "2017-09-28T09:00",
-       "endDate": "2017-09-28T17:00",
-       "description": "Papers We Love Conference 2017",
-       "image": "http://pwlconf.org/images/PWLCONF-logo@2x.png",
-       "performer": [
-         {
-           "@type": "Person",
-           "name": "TBD"
-         }
-       ],
-       "location": {
-         "@type": "Place",
-         "name": "Union Station Doubletree",
-         "url": "http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html",
-         "address": {
-           "@type": "PostalAddress",
-           "addressLocality": "St. Louis",
-           "addressRegion": "MO",
-           "streetAddress": "1820 Market St.",
-           "postalCode": "63103",
-           "telephone": "314-231-1234"
-         },
-         "hasMap": "https://www.google.com/maps/place/St.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel/data=!4m2!3m1!1s0x87d8b31de5f5865d:0xa0a4a4e039774dd1?gl=US&hl=en"
-       }
-     }
+      {
+      "@context": "http://schema.org/",
+      "@type": "Event",
+      "name": "PWLConf 2017",
+      "url": "http://pwlconf.org",
+      "startDate": "2017-09-28T09:00",
+      "endDate": "2017-09-28T17:00",
+      "description": "Papers We Love Conference 2017",
+      "image": "http://pwlconf.org/images/PWLCONF-logo@2x.png",
+      "performer": [
+      {
+      "@type": "Person",
+      "name": "TBD"
+      }
+      ],
+      "location": {
+      "@type": "Place",
+      "name": "Union Station Doubletree",
+      "url": "http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html",
+      "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "St. Louis",
+      "addressRegion": "MO",
+      "streetAddress": "1820 Market St.",
+      "postalCode": "63103",
+      "telephone": "314-231-1234"
+      },
+      "hasMap": "https://www.google.com/maps/place/St.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel/data=!4m2!3m1!1s0x87d8b31de5f5865d:0xa0a4a4e039774dd1?gl=US&hl=en"
+      }
+      }
     </script>
+    <%= javascript_include_tag 'all' %>
   </body>
 </html>
 <!--
@@ -187,9 +192,8 @@ end
 
      Brought to you by the fine folks at http://paperswelove.org
 
-     Logo design courtesy of https://twitter.com/jessicaspacekat
+     Logo design courtesy of https://twitter.com/imnikkilee
      HTML and all that jazz banged out by https://twitter.com/d_run
-     With the assistance and forbearance of https://twitter.com/alazyreader
 
      The Papers We Love logo, site content and design is
      Copyright (c) <%= Date.today.year %> Papers We Love LLC, all rights reserved

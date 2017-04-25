@@ -2,75 +2,43 @@
 title: Home
 og_title: Papers We Love Conference 2017
 ---
-<article id="articleContainer" class="pageHome">
-  <section class="articleTagline">
-    Join us for a day with some of Papers We Love’s favorite writers and speakers.
-  </section>
-  <%= partial '2017/partials/internalTopNav' %>
-  <section class="articleMasthead">
-    <div class="articleMastheadContent">
-      <div class="mastheadRow top">
-        <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerTopLeft" %>
-        <%= image_tag 'logo-top.svg', :alt => "Papers We Love", :title => "Papers We Love | A community for computer science papers", :class => "imgPwlLogo" %>
-        <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerTopRight" %>
-      </div>
+<!-- partial for topnav  -->
 
-      <div class="mastheadRow">
-        <span class="mastheadCity">St. Louis</span>
-        <%= image_tag 'pwl-conf-2017.svg', :alt => "PWLConf 2017", :title => "Papers We Love Conference 2017", :class => "imgPwlConfLogo" %>
-        <span class="mastheadState">Missouri</span>
-      </div>
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Code of Conduct</a>
+    <a href="#">Sponsors</a>
+    <a href="#">Conference Repository</a>
+  </nav>
+  <img class="desktop-img" src="http://static.v25media.com/pwl-desktop-header-ALT.png"/>
+  <img class="mobile-img" src="http://static.v25media.com/pwl-mobile-header-ALT.png"/>
+</header>
 
-      <div class="mastheadRow bottom">
-        <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomLeft" %>
-        <div class="mastheadLinks">
-          <span class="mastheadDates">September 28, 2017</span>
-        </div>
-        <%= image_tag 'corner.svg', :alt => "corner", :class => "cornerBottomRight" %>
-      </div>
+<div class="mobile-text">
+  <p>September 28, 2017</p>
+  <p>St. Louis, MO</p>
+</div>
+
+<article class="container">
+  <section>
+    <div class="col-md-12">
+      <h1>Hello friends</h1>
+      <p>Nesciunt non optio consectetur. Sunt et cumque assumenda. Ut vitae odit aut eius minus consequuntur iste sunt. Vel fugiat qui amet hic maxime et.</p>
     </div>
   </section>
-
-  <section class="articlePhotoContent">
-    <%= image_tag 'L1040634_mod2.jpg', :alt => "Basho", :title => "Basho - 2016 Sponsor of PWLConf", :class => "photoBernstein" %>
-    <div class="photoCaption">
-      <h3>&nbsp;</h3>
-      <a href="/2016/claire-legoues">Claire Le Goues</a> @ PWLConf 2016
+  <section>
+    <div class="col-md-4">
+      Columns
+    </div>
+    <div class="col-md-4">
+      Columns
+    </div>
+    <div class="col-md-4">
+      Columns
     </div>
   </section>
-
-  <section class="articleTextContent">
-    <h2>Papers We Love Conference 2017</h2>
-    <h1>We're ready for 2017!</h1>
-    <p><a href="/2016/">Papers We Love 2016</a> was a great success and we'd like to thank all of our speakers and all of you who made it such a great conference.</p>
-    <p>We're putting together another line-up of amazing speakers for 2017 and hope to see you in St. Louis in conjunction with <a href="https://thestrangeloop.com/">Strange Loop</a>.</p>
-
-    </p>We'll be posting more information here very soon, so stay tuned. In the meantime you can <a href="http://papersweloveslack.herokuapp.com/">join the Papers We Love Slack</a> to keep up with the latest developments. If you or your company is <a href="/2017/prospectus/">interested in sponsoring PWLConf 2017</a> please <a href="mailto:contact@paperswelove.org">contact us</a>.</p>
-  </section>
-
-
-  <section class="articleVenueContent">
-    <div class="articleVenueRow">
-      <iframe title="Map to venue" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557794574!2d-90.20978604817624!3d38.629173979512835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+-+a+DoubleTree+by+Hilton+Hotel!5e0!3m2!1sen!2sus!4v1469380520055" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
-      <div class="venueInformation">
-        <h2>Conference Location</h2>
-        <p ><strong>September 28<sup>th</sup>, 2017</strong></p>
-        <span>
-          <p><a  href="http://doubletree3.hilton.com/en/hotels/missouri/st-louis-union-station-a-doubletree-by-hilton-hotel-STLUSDT/index.html"><span>Union Station Doubletree</span></a></p>
-          <p><span>1820 Market St.</span></p>
-          <p>
-            <span>St. Louis</span>,
-            <span>MO</span>
-            <span>63103</span>
-          </p>
-          <p><span>(314) 231-1234</span></p>
-        </span>
-        <p class="button">
-          <!-- link to SL -->
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <%= partial '2017/partials/footer' %>
 </article>
+
+<!-- partial for footer  -->
