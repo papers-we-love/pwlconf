@@ -3,6 +3,7 @@
 $icon-font-path: '../fonts/bootstrap/';
 
 @import 'bootstrap';
+@import "font-awesome/font-awesome";
 
 $palePrimary: #B4E2EF;
 $lightPrimary: #5AB5E6;
@@ -28,11 +29,13 @@ body {
   font-family: $sans;
 }
 
-header {
+.home-main-image {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 80px;
+
   &:after {
     display: block;
     content: '';
@@ -57,22 +60,99 @@ header {
   display: none;
 }
 
-nav {
-  border-bottom: 1px solid rgba($primary, .1);
-  padding: 30px 0 20px;
-  margin: 0 0 10px;
-  width: 100%;
-  text-align: center;
-  a {
-    color: $primary;
-    font-family: $serif;
-    text-decoration: none;
-    margin: 0 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: .03rem;
+// Topnav
+// ======
+
+.topnav {
+  ul {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    li {
+      a {
+        color: $primary !important;
+        font-family: $serif;
+        text-decoration: none;
+        margin: 0 8px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .03rem;
+
+        &:hover {
+          color: $secondary !important;
+        }
+      }
+    }
   }
 }
+
+.home-topnav {
+  background-color: lighten($paleTertiary, 5);
+  border-bottom: 0;
+
+  button.navbar-toggle {
+    border: darken($paleTertiary, 20) 1px solid;
+    &:hover {
+      background: darken($paleTertiary, 10);
+    }
+
+    .icon-bar {
+      background: darken($paleTertiary, 30);
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(#ffffff, $paleTertiary);
+    border-bottom: 0;
+  }
+}
+
+
+// Footer
+// ======
+
+footer {
+  .navbar {
+    background: none;
+    padding: 2em 0;
+    border: 0px;
+  }
+
+  .navbar-text {
+    font-family: $serif;
+    padding-right: 2em;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-family: $serif;
+    font-size: 1.3em;
+    color: $primary;
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  span.footerItemLabel {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-default .navbar-nav > li > a {
+      display: inline-block;
+    }
+
+    span.footerItemLabel {
+      display: inline;
+    }
+  }
+}
+
 
 .mobile-text {
   display: none;
@@ -101,12 +181,11 @@ body {
 
 section {
   @include make-row();
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 // Type
 // ====
-
 
 h1, h2, h3, h4 {
   font-family: $serif;
@@ -129,6 +208,7 @@ p {
 
   .showcase-headline {
     @include make-md-column(12);
+    padding-top: 1em;
     text-align: center;
     h1 {
       font-size: 3.6em;
@@ -138,9 +218,15 @@ p {
 
   .showcase-text {
     @include make-md-column(12);
+    padding-bottom: 3em;
+
     p {
       text-align: center;
       font-size: 1.4em;
+
+      @media (max-width: 768px) {
+        text-align: left;
+      }
     }
   }
 

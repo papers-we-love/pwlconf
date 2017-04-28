@@ -5,16 +5,33 @@ og_title: Papers We Love Conference 2017
 <!-- partial for topnav  -->
 
 <header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Code of Conduct</a>
-    <a href="#">Sponsors</a>
-    <a href="#">Conference Repository</a>
+  <nav class="home-topnav topnav navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="topnav-collapse">
+        <ul role="navigation" class="nav navbar-nav">
+          <li role="presentation"><a href="#">About</a></li>
+          <li role="presentation"><a href="#">Code of Conduct</a></li>
+          <li role="presentation"><a href="#">Sponsors</a></li>
+          <li role="presentation"><a href="#">Conference Repository</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
+</header>
+
+<div class="home-main-image">
   <img class="desktop-img" src="http://static.v25media.com/pwl-desktop-header-ALT.png"/>
   <img class="mobile-img" src="http://static.v25media.com/pwl-mobile-header-ALT.png"/>
-</header>
+</div>
 
 <div class="mobile-text">
   <p>September 28, 2017</p>
@@ -30,9 +47,6 @@ og_title: Papers We Love Conference 2017
       <p><a href="/2016/">Papers We Love 2016</a> was a great success and we'd like to thank all of our speakers and all of you who made it such a great conference. We're putting together another line-up of amazing speakers for 2017 and hope to see you in St. Louis in conjunction with <a href="https://thestrangeloop.com/">Strange Loop</a>.</p>
 
       <p>We'll be posting more information here very soon, so stay tuned. In the meantime you can <a href="http://papersweloveslack.herokuapp.com/">join the Papers We Love Slack</a> to keep up with the latest developments. If you or your company is <a href="/2017/prospectus/">interested in sponsoring PWLConf 2017</a> please <a href="mailto:contact@paperswelove.org">contact us</a>.</p>
-    </div>
-    <div class="showcase-image">
-      <%= image_tag 'L1040634_mod2.jpg', :alt => "Basho", :title => "Basho - 2016 Sponsor of PWLConf", :class => "photoBernstein" %>
     </div>
   </section>
   <section>
@@ -57,3 +71,38 @@ og_title: Papers We Love Conference 2017
 </article>
 
 <!-- partial for footer  -->
+<footer>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-collapse">
+        <ul role="navigation" class="footernav nav navbar-nav">
+          <li role="presentation">
+            <a href="https://twitter.com/papers_we_love" title="@papers_we_love">
+              <i class="fa fa-twitter-square fa-lg"></i>
+            </a>
+            <span class="footerItemLabel">Twitter</span>
+          </li>
+          <li role="presentation">
+            <a href="http://papersweloveslack.herokuapp.com/" title="Slack">
+              <i class="fa fa-slack fa-lg"></i>
+            </a>
+            <span class="footerItemLabel">Slack</span>
+          </li>
+          <li role="presentation">
+            <a href="http://paperswelove.org" title="paperswelove.org">
+              <i class="fa fa-file fa-lg"></i>
+            </a>
+            <span class="footerItemLabel">Web</span>
+          </li>
+          <li role="presentation">
+            <a href="mailto:pwlconf@paperswelove.org" title="Send email">
+              <i class="fa fa-envelope fa-lg"></i>
+            </a>
+            <span class="footerItemLabel">Email</span>
+          </li>
+        </ul>
+        <p class="navbar-text navbar-right">&copy; 2017 Papers We Love, all rights reserved</p>
+      </div>
+    </div>
+  </nav>
+</footer>
