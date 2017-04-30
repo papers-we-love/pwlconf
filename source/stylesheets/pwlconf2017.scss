@@ -36,6 +36,10 @@ body {
   align-items: center;
   padding-top: 80px;
 
+  @media (max-width: 768px) {
+    padding-top: 60px;
+  }
+
   &:after {
     display: block;
     content: '';
@@ -93,22 +97,22 @@ body {
 }
 
 .home-topnav {
-  background-color: lighten($paleTertiary, 5);
+  background: linear-gradient(lighten($paleTertiary, 5), $paleTertiary);
   border-bottom: 0;
 
   button.navbar-toggle {
-    border: darken($paleTertiary, 20) 1px solid;
+    border: $paleSecondary 1px solid;
     &:hover {
-      background: darken($paleTertiary, 10);
+      background: $paleSecondary;
     }
 
     .icon-bar {
-      background: darken($paleTertiary, 30);
+      background: darken($paleSecondary, 10);
     }
   }
 
   @media (max-width: 768px) {
-    background: linear-gradient(#ffffff, $paleTertiary);
+    background: linear-gradient(lighten($paleTertiary, 5), $paleTertiary);
     border-bottom: 0;
   }
 }
@@ -133,7 +137,11 @@ body {
   }
 
   .navbar-header {
+    display: none;
     min-height: 60px;
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   @media (max-width: 768px) {
@@ -225,9 +233,12 @@ footer {
   }
 
   .mobile-text {
+    margin-top: 1em;
     display: block;
     text-align: center;
-    color: red;
+    color: $secondary;
+    line-height: 100%;
+    font-size: 1.2em;
   }
 }
 
@@ -247,11 +258,17 @@ h1, h2, h3, h4 {
 }
 
 p {
+  font-size: 1em;
+
   a {
     color: $primary;
     &:hover {
       color: $secondary;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
   }
 }
 
@@ -273,6 +290,10 @@ p {
       font-size: 3.6em;
       margin-bottom: .8em;
     }
+
+    @media (max-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .showcase-text {
@@ -286,6 +307,10 @@ p {
       @media (max-width: 768px) {
         text-align: left;
       }
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: 0;
     }
   }
 
