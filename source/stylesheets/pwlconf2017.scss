@@ -113,6 +113,58 @@ body {
   }
 }
 
+.internal-topnav {
+  background-color: $palePrimary;
+  min-height: 80px;
+
+  .navbar-nav {
+    li.nav-link {
+      a {
+        padding-top: 2.2em;
+        @media (max-width: 768px) {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .navbar-header {
+    min-height: 80px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 90px;
+    .navbar-header {
+      min-height: 90px;
+    }
+  }
+
+  .navbar-brand {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  .navbar-collapse-logo {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  button.navbar-toggle {
+    margin-top: 1.6em;
+    border: darken($palePrimary, 40) 1px solid;
+    &:hover {
+      background: darken($palePrimary, 10);
+    }
+
+    .icon-bar {
+      background: darken($palePrimary, 40);
+    }
+  }
+}
 
 // Footer
 // ======
@@ -181,7 +233,6 @@ body {
 
 section {
   @include make-row();
-  margin-bottom: 3em;
 }
 
 // Type
@@ -205,6 +256,10 @@ p {
 
 .home {
   margin-top: 2em;
+
+  section {
+    margin-bottom: 3em;
+  }
 
   .showcase-headline {
     @include make-md-column(12);
@@ -286,4 +341,46 @@ p {
     }
   }
 
+}
+
+// Internal
+// ========
+
+.internal {
+  margin-top: 110px;
+
+  section {
+    margin-bottom: 2em;
+  }
+}
+
+.prospectus {
+  .prospectus-headline {
+    @include make-md-column(12);
+  }
+
+  .prospectus-text {
+    @include make-md-column(8);
+  }
+
+  .prospectus-photo {
+    @include make-md-column(4);
+
+    img {
+      margin-bottom: .5em;
+    }
+
+    span {
+      font-size: 1em;
+      color: #999;
+    }
+  }
+
+  .prospectus-opportunities {
+    @include make-md-column(6);
+  }
+
+  .prospectus-opportunity {
+    margin-bottom: 2em;
+  }
 }

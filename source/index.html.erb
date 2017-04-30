@@ -2,31 +2,7 @@
 title: Home
 og_title: Papers We Love Conference 2017
 ---
-<!-- partial for topnav  -->
-
-<header>
-  <nav class="home-topnav topnav navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="topnav-collapse">
-        <ul role="navigation" class="nav navbar-nav">
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="#">Code of Conduct</a></li>
-          <li role="presentation"><a href="#">Sponsors</a></li>
-          <li role="presentation"><a href="#">Conference Repository</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<%= partial '2017/partials/indexTopnav' %>
 
 <div class="home-main-image">
   <img class="desktop-img" src="http://static.v25media.com/pwl-desktop-header-ALT.png"/>
@@ -69,40 +45,3 @@ og_title: Papers We Love Conference 2017
     </div>
   </section>
 </article>
-
-<!-- partial for footer  -->
-<footer>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-collapse">
-        <ul role="navigation" class="footernav nav navbar-nav">
-          <li role="presentation">
-            <a href="https://twitter.com/papers_we_love" title="@papers_we_love">
-              <i class="fa fa-twitter-square fa-lg"></i>
-            </a>
-            <span class="footerItemLabel">Twitter</span>
-          </li>
-          <li role="presentation">
-            <a href="http://papersweloveslack.herokuapp.com/" title="Slack">
-              <i class="fa fa-slack fa-lg"></i>
-            </a>
-            <span class="footerItemLabel">Slack</span>
-          </li>
-          <li role="presentation">
-            <a href="http://paperswelove.org" title="paperswelove.org">
-              <i class="fa fa-file fa-lg"></i>
-            </a>
-            <span class="footerItemLabel">Web</span>
-          </li>
-          <li role="presentation">
-            <a href="mailto:pwlconf@paperswelove.org" title="Send email">
-              <i class="fa fa-envelope fa-lg"></i>
-            </a>
-            <span class="footerItemLabel">Email</span>
-          </li>
-        </ul>
-        <p class="navbar-text navbar-right">&copy; 2017 Papers We Love, all rights reserved</p>
-      </div>
-    </div>
-  </nav>
-</footer>
