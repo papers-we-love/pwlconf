@@ -115,10 +115,14 @@ body {
 
 .internal-topnav {
   background-color: $palePrimary;
-  min-height: 80px;
+  min-height: 60px;
 
   .navbar-nav {
     li.nav-link {
+      margin-bottom: 0;
+      @media (max-width: 768px) {
+        margin-bottom: 14px;
+      }
       a {
         padding-top: 2.2em;
         @media (max-width: 768px) {
@@ -129,7 +133,7 @@ body {
   }
 
   .navbar-header {
-    min-height: 80px;
+    min-height: 60px;
   }
 
   @media (max-width: 768px) {
@@ -148,6 +152,7 @@ body {
   }
 
   .navbar-collapse-logo {
+    margin-bottom: 0;
     @media (max-width: 768px) {
       display: none;
     }
@@ -204,7 +209,6 @@ footer {
     }
   }
 }
-
 
 .mobile-text {
   display: none;
@@ -354,26 +358,41 @@ p {
   }
 }
 
+.headline-col {
+  @include make-md-column(12);
+}
+
+.text-col {
+  @include make-md-column(8);
+}
+
+.photo-col {
+  @include make-md-column(4);
+
+  img {
+    margin-bottom: .5em;
+  }
+
+  span {
+    font-size: 1em;
+    color: #999;
+  }
+}
+
+// Prospectus
+// ==========
+
 .prospectus {
   .prospectus-headline {
-    @include make-md-column(12);
+    @extend .headline-col;
   }
 
   .prospectus-text {
-    @include make-md-column(8);
+    @extend .text-col;
   }
 
   .prospectus-photo {
-    @include make-md-column(4);
-
-    img {
-      margin-bottom: .5em;
-    }
-
-    span {
-      font-size: 1em;
-      color: #999;
-    }
+    @extend .photo-col;
   }
 
   .prospectus-opportunities {
@@ -382,5 +401,73 @@ p {
 
   .prospectus-opportunity {
     margin-bottom: 2em;
+  }
+}
+
+// Sponsors
+// ========
+
+.sponsors {
+  .sponsors-text {
+    @extend .text-col;
+  }
+
+  .sponsors-photo {
+    @extend .photo-col;
+  }
+}
+
+// Code of Conduct
+// ===============
+
+.coc {
+  .coc-headline {
+    @extend .headline-col;
+  }
+
+  .coc-text {
+    @extend .text-col;
+  }
+
+  .coc-photo {
+    @extend .photo-col;
+
+    h3 {
+      margin-top: 0;
+
+      @media (max-width: 768px) {
+        margin-top: 1em;
+      }
+
+      @media (max-width: 1000px) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  ul {
+    li {
+      margin-bottom: 1em;
+      strong {
+        display: block;
+      }
+    }
+  }
+}
+
+// About
+// =====
+
+.about {
+  .about-headline {
+    @extend .headline-col;
+  }
+
+  .about-text {
+    @extend .text-col;
+  }
+
+  .about-photo {
+    @extend .photo-col;
   }
 }
