@@ -1,0 +1,70 @@
+<section class="speakerContainer">
+  <div class="speakerImage">
+    <a href="/2016/casey-muratori">
+      <%= image_tag 'speakers/CaseyMuratori.png', :alt => "Casey Muratori", :title => "Casey Muratori", :class => "imgSpeaker" %>
+    </a>
+  </div>
+  <h1>Casey Muratori</h1>
+  <h2><a href="https://mollyrocket.com/">Molly Rocket</a></h2>
+
+  <% unless current_page.url == '/2016/' %>
+  <ul class="speakerLinks">
+    <li><a href="https://mollyrocket.com/casey/">website</a></li>
+    <li><a href="https://twitter.com/cmuratori">@cmuratori</a></li>
+  </ul>
+
+  <section class="articleVideoContent">
+    <iframe src="https://www.youtube.com/embed/SDS5gLSiLg0" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <script async class="speakerdeck-embed" data-id="06ad1516b9cb4578ad7d45eb09fda6b4" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+  <h3>Papers I Have Loved</h3>
+  <p>Modern video games rely on a surprisingly broad array of technologies
+    to bring them to life. Many of the cornerstone techniques used today
+    started life as academic research which was then repurposed, extended,
+    refined, and optimized to suit the demanding constraints of real time
+    game engines. For this inaugural Papers We Love conference, I have
+    selected three influential academic papers which were instrumental to
+    technologies I worked on during my twenty years in the game industry.
+    For each paper, I'll tell the story of how it became a part of the
+    development process, what it contributed, where it fell short, and how
+    it attained the final form it took in game engine technology.</p>
+
+  <h3>Referenced Papers</h3>
+  <ul class="referencedPapers">
+    <li>
+      <a href="https://people.eecs.berkeley.edu/~sequin/CS285/PAPERS/Lorensen_Cline.pdf">
+        Marching Cubes: A High Resolution 3D Surface Construction Algorithm
+      </a>
+    </li>
+    <li>
+      <a href="http://www.cs.ucr.edu/~vbz/resources/quatut.pdf">
+        Quaternions
+      </a>
+    </li>
+    <li>
+      <a href="https://graphics.stanford.edu/courses/cs448b-00-winter/papers/gilbert.pdf">
+        A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space
+      </a>
+    </li>
+  </ul>
+
+  <img src="/images/STL_1443.jpg" alt="Casey Mutatori" />
+  <div class="photoCaption">Photo credit: <a href="https://twitter.com/michaelbridge">Mike Bridge</a></div>
+
+  <h3>Bio</h3>
+  <p>Casey Muratori is the host of <a href="https://handmadehero.org">Handmade Hero</a>,
+    an educational programming series, and the lead programmer at <a href="https://mollyrocket.com">Molly
+    Rocket</a> on <a href="https://molly1935.com">1935</a>, an
+    upcoming interactive narrative game about organized crime in 1930s New
+    York. His past projects include <a href="http://www.radgametools.com/granny.html">The Granny Animation
+    SDK</a>, <a href="http://www.radgametools.com/bnkmain.htm">Bink 2</a>, and <a href="http://the-witness.net">The Witness</a>.</p>
+
+  <p>Casey's past research contributions include the n-way linear
+    quaternion blend, the immediate mode graphical user interface (IMGUI),
+    and the first geometric optimizations for the Gilbert-Johnson-Keerthi
+    (GJK) algorithm. His current research interests include interactive
+    fiction, concurrent computing, and operating system architecture.</p>
+  <% end %>
+</section>
