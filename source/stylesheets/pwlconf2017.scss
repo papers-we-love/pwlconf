@@ -10,7 +10,7 @@ $lightPrimary: #5AB5E6;
 $primary: #268ACB;
 $darkPrimary: #0A61AE;
 
-$paleSecondary: desaturate(#FBD1D9, 20);
+$paleSecondary: desaturate(#FBD1D9, 30);
 $lightSecondary: #F48A9F;
 $secondary: #F15965;
 $darkSecondary: #DE3A4E;
@@ -45,12 +45,12 @@ body {
     content: '';
     width: 100%;
     height: calc(100% - 65px);
-    background: linear-gradient($paleTertiary, $paleSecondary, $palePrimary);
+    background: linear-gradient($paleTertiary 50px, $paleSecondary, $palePrimary);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: .8;
+    //opacity: .8;
   }
 }
 
@@ -97,17 +97,17 @@ body {
 }
 
 .home-topnav {
-  background: linear-gradient(lighten($paleTertiary, 5), $paleTertiary);
+  background: $paleTertiary;
   border-bottom: 0;
 
   button.navbar-toggle {
-    border: $paleSecondary 1px solid;
+    border: darken($paleSecondary, 10) 1px solid;
     &:hover {
       background: $paleSecondary;
     }
 
     .icon-bar {
-      background: darken($paleSecondary, 10);
+      background: darken($paleSecondary, 20);
     }
   }
 
