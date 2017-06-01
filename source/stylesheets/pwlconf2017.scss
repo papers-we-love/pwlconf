@@ -74,7 +74,7 @@ body {
     display: flex;
     justify-content: space-around;
 
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       display: block;
     }
 
@@ -124,12 +124,12 @@ body {
   .navbar-nav {
     li.nav-link {
       margin-bottom: 0;
-      @media (max-width: 768px) {
+      @media (max-width: 760px) {
         margin-bottom: 14px;
       }
       a {
         padding-top: 2.2em;
-        @media (max-width: 768px) {
+        @media (max-width: 760px) {
           padding-top: 10px;
         }
       }
@@ -139,12 +139,12 @@ body {
   .navbar-header {
     display: none;
     min-height: 60px;
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       display: block;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 760px) {
     min-height: 90px;
     .navbar-header {
       min-height: 90px;
@@ -154,14 +154,14 @@ body {
   .navbar-brand {
     display: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       display: inline-block;
     }
   }
 
   .navbar-collapse-logo {
     margin-bottom: 0;
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       display: none;
     }
   }
@@ -207,7 +207,7 @@ footer {
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 760px) {
     .navbar-default .navbar-nav > li > a {
       display: inline-block;
     }
@@ -257,20 +257,41 @@ h1, h2, h3, h4 {
   font-family: $serif;
 }
 
-p {
-  font-size: 1em;
+.text-styles {
+  h3 {
+    margin: 1.8em 0 1em 0;
+  }
 
-  a {
-    color: $primary;
-    &:hover {
-      color: $secondary;
+  p {
+    font-size: 1.2em;
+    line-height: 145%;
+
+    a {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.4em;
     }
   }
 
-  @media (max-width: 768px) {
-    font-size: 1.2em;
+  ul {
+    margin: 2em 0;
+    li {
+      color: #444;
+      font-family: $sans;
+      font-size: 1.2em;
+      font-style: italic;
+      line-height: 150%;
+      margin-bottom: 1em;
+      width: 90%;
+    }
   }
 }
+
 
 // Home
 // ====
@@ -350,7 +371,10 @@ p {
         margin-left: 100px;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 760px) {
+        dt {
+          text-align: left !important;
+        }
         dd {
           margin: 0 0 1em 0;
         }
@@ -385,14 +409,30 @@ p {
 
 .headline-col {
   @include make-md-column(12);
+
+  h1 {
+    margin: 2em 0 1.6em 0;
+    line-height: 130%;
+
+    @media (max-width: 768px) {
+      margin: .8em 0 1em 0;
+    }
+  }
+
+  h4 {
+    margin-bottom: 1em;
+    font-style: italic;
+  }
 }
 
 .text-col {
   @include make-md-column(8);
+  @extend .text-styles;
 }
 
 .photo-col {
   @include make-md-column(4);
+  @extend .text-styles;
 
   img {
     margin-bottom: .5em;
@@ -410,6 +450,7 @@ p {
 .prospectus {
   .prospectus-headline {
     @extend .headline-col;
+    margin-bottom: 2em;
   }
 
   .prospectus-text {
@@ -422,15 +463,37 @@ p {
 
   .prospectus-opportunities {
     @include make-md-column(6);
+    @extend .text-styles;
+
+    h4 {
+      font-size: 1.4em;
+      font-weight: 700;
+    }
   }
 
   .prospectus-opportunity {
     margin-bottom: 2em;
+
+    @media (max-width: 768px) {
+      margin-bottom: 3em;
+    }
   }
 }
 
 // Sponsors
 // ========
+
+.sponsor-col {
+  @extend .text-styles;
+  margin: 2em 0;
+  p {
+    text-align: center;
+  }
+  a.sponsor-logo-link {
+    display: block;
+    text-align: center;
+  }
+}
 
 .sponsors {
   .sponsors-text {
@@ -439,6 +502,67 @@ p {
 
   .sponsors-photo {
     @extend .photo-col;
+  }
+
+  .platinum {
+    @include make-md-column(6);
+    @extend .sponsor-col;
+
+    img {
+      @media (min-width: 1000px) {
+        height: 200px;
+      }
+    }
+  }
+
+  .gold {
+    @include make-md-column(6);
+    @extend .sponsor-col;
+  }
+
+  .silver {
+    @include make-md-column(4);
+    @extend .sponsor-col;
+
+    img {
+      width: 80%;
+      @media (min-width: 1000px) {
+        height: 120px;
+      }
+    }
+  }
+
+  .bronze {
+    @include make-md-column(4);
+    @extend .sponsor-col;
+
+    img {
+      width: 50%;
+      @media (min-width: 1000px) {
+        width: 65%;
+        height: 100px;
+      }
+    }
+  }
+
+  img.sponsor-comcast {
+    width: 65%;
+    margin-bottom: 2em;
+
+    @media (min-width: 1000px) {
+      margin-bottom: 0;
+    }
+  }
+
+  img.sponsor-twosigma {
+    width: 100%;
+  }
+
+  img.sponsor-cerner {
+    margin-bottom: 2em;
+    @media (min-width: 1000px) {
+      margin-bottom: 0;
+    }
   }
 }
 
