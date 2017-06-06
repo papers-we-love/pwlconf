@@ -1,0 +1,117 @@
+@import "bootstrap";
+@import "variables";
+
+// Topnav
+// ======
+
+.topnav {
+  ul {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 760px) {
+      display: block;
+    }
+
+    li {
+      a {
+        color: $primary !important;
+        font-family: $serif;
+        text-decoration: none;
+        margin: 0 8px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .03rem;
+
+        &:hover {
+          color: $secondary !important;
+        }
+      }
+    }
+  }
+}
+
+.home-topnav {
+  background: $paleTertiary;
+  border-bottom: 0;
+
+  button.navbar-toggle {
+    border: darken($paleSecondary, 10) 1px solid;
+    &:hover {
+      background: $paleSecondary;
+    }
+
+    .icon-bar {
+      background: darken($paleSecondary, 20);
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(lighten($paleTertiary, 5), $paleTertiary);
+    border-bottom: 0;
+  }
+}
+
+.internal-topnav {
+  background-color: $palePrimary;
+  min-height: 60px;
+
+  .navbar-nav {
+    li.nav-link {
+      margin-bottom: 0;
+      @media (max-width: 760px) {
+        margin-bottom: 14px;
+      }
+      a {
+        padding-top: 2.2em;
+        @media (max-width: 760px) {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .navbar-header {
+    display: none;
+    min-height: 60px;
+    @media (max-width: 760px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 760px) {
+    min-height: 90px;
+    .navbar-header {
+      min-height: 90px;
+    }
+  }
+
+  .navbar-brand {
+    display: none;
+
+    @media (max-width: 760px) {
+      display: inline-block;
+    }
+  }
+
+  .navbar-collapse-logo {
+    margin-bottom: 0;
+    @media (max-width: 760px) {
+      display: none;
+    }
+  }
+
+  button.navbar-toggle {
+    margin-top: 1.6em;
+    border: darken($palePrimary, 40) 1px solid;
+    &:hover {
+      background: darken($palePrimary, 10);
+    }
+
+    .icon-bar {
+      background: darken($palePrimary, 40);
+    }
+  }
+}
