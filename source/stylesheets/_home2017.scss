@@ -1,0 +1,137 @@
+@import "variables";
+
+// Home
+// ====
+
+.home {
+  margin-top: 2em;
+
+  section {
+    margin-bottom: 1em;
+  }
+
+  .showcase-headline {
+    @include make-md-column(12);
+    padding-top: 1em;
+    text-align: center;
+    h1 {
+      font-size: 3.6em;
+      margin-bottom: .8em;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 0;
+    }
+  }
+
+  .showcase-text {
+    @include make-md-column(12);
+    padding-bottom: 3em;
+
+    p {
+      text-align: center;
+      font-size: 1.4em;
+
+      @media (max-width: 768px) {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: 0;
+    }
+  }
+
+  .showcase-image {
+    @include make-md-column(12);
+    img {
+      margin: 1em 0;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .location-header {
+    @include make-md-column(12);
+  }
+
+  .location-map {
+    @include make-md-column(8);
+  }
+
+  .location-details {
+    @include make-md-column(4);
+
+    dl.dl-horizontal {
+      dt {
+        font-size: 1.2em;
+        width: 80px;
+        font-weight: 700;
+      }
+
+      dd {
+        font-size: 1.2em;
+        margin-left: 100px;
+      }
+
+      @media (max-width: 760px) {
+        dt {
+          text-align: left !important;
+        }
+        dd {
+          margin: 0 0 1em 0;
+        }
+      }
+    }
+  }
+
+  .venueMap {
+    margin: 0;
+    width: 100%;
+    height: 378px;
+  }
+
+  @media (max-width: 768px) {
+    .venueMap {
+      height: 320px;
+    }
+  }
+
+  .speakers {
+    @include make-md-column(12);
+    padding-bottom: 4em;
+
+    .speakers-headline {
+      padding-top: 1em;
+      text-align: center;
+      h1 {
+        font-size: 3em;
+        margin-bottom: .8em;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+
+    .speaker-list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      div {
+        text-align: center;
+        img {
+          clip-path: circle(120px at center);
+        }
+      }
+    }
+  }
+
+}

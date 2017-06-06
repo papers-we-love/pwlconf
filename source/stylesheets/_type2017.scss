@@ -1,0 +1,43 @@
+@import "variables";
+
+// Type
+// ====
+
+h1, h2, h3, h4 {
+  font-family: $serif;
+}
+
+.text-styles {
+  h3 {
+    margin: 1.8em 0 1em 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 145%;
+
+    a {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.4em;
+    }
+  }
+
+  ul {
+    margin: 2em 0;
+    li {
+      color: #444;
+      font-family: $sans;
+      font-size: 1.2em;
+      font-style: italic;
+      line-height: 150%;
+      margin-bottom: 1em;
+      width: 90%;
+    }
+  }
+}
