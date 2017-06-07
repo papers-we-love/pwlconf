@@ -28,9 +28,25 @@
     @include make-md-column(12);
     padding-bottom: 3em;
 
+    h2 {
+      text-align: center;
+    }
+
     p {
       text-align: center;
       font-size: 1.4em;
+
+      &.ticket-callout {
+        padding: 0.5em;
+        background: $paleSecondary;
+        border: $secondary 1px solid;
+        border-radius: 6px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+          padding: 1em 0.5em;
+        }
+      }
 
       @media (max-width: 768px) {
         text-align: left;

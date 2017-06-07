@@ -18,7 +18,8 @@ body {
 @import "footer2017";
 @import "type2017";
 @import "home2017";
-
+@import "sponsor2017";
+@import "speaker2017";
 
 // Internal
 // ========
@@ -104,91 +105,6 @@ body {
   }
 }
 
-// Sponsors
-// ========
-
-.sponsor-col {
-  @extend .text-styles;
-  margin: 2em 0;
-  p {
-    text-align: center;
-  }
-  a.sponsor-logo-link {
-    display: block;
-    text-align: center;
-  }
-}
-
-.sponsors {
-  .sponsors-text {
-    @extend .text-col;
-  }
-
-  .sponsors-photo {
-    @extend .photo-col;
-  }
-
-  .platinum {
-    @include make-md-column(6);
-    @extend .sponsor-col;
-
-    img {
-      @media (min-width: 1000px) {
-        height: 200px;
-      }
-    }
-  }
-
-  .gold {
-    @include make-md-column(6);
-    @extend .sponsor-col;
-  }
-
-  .silver {
-    @include make-md-column(4);
-    @extend .sponsor-col;
-
-    img {
-      width: 80%;
-      @media (min-width: 1000px) {
-        height: 120px;
-      }
-    }
-  }
-
-  .bronze {
-    @include make-md-column(4);
-    @extend .sponsor-col;
-
-    img {
-      width: 50%;
-      @media (min-width: 1000px) {
-        width: 65%;
-        height: 100px;
-      }
-    }
-  }
-
-  img.sponsor-comcast {
-    width: 65%;
-    margin-bottom: 2em;
-
-    @media (min-width: 1000px) {
-      margin-bottom: 0;
-    }
-  }
-
-  img.sponsor-twosigma {
-    width: 100%;
-  }
-
-  img.sponsor-cerner {
-    margin-bottom: 2em;
-    @media (min-width: 1000px) {
-      margin-bottom: 0;
-    }
-  }
-}
 
 // Code of Conduct
 // ===============
