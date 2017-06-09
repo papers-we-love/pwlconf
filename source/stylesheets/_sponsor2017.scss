@@ -42,7 +42,7 @@
   }
 
   .silver {
-    @include make-md-column(4);
+    @include make-md-column(6);
     @extend .sponsor-col;
 
     img {
@@ -80,6 +80,19 @@
   }
 
   img.sponsor-cerner {
+    width: 50%;
+    margin-bottom: 2em;
+
+    @media (max-width: 768px) {
+      width: 85%;
+    }
+
+    @media (min-width: 1000px) {
+      margin-bottom: 0;
+    }
+  }
+
+  img.sponsor-acm {
     margin-bottom: 2em;
     @media (min-width: 1000px) {
       margin-bottom: 0;
