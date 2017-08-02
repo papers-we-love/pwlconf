@@ -160,4 +160,51 @@
     }
   }
 
+  .top-sponsors {
+    @include make-md-column(12);
+    padding: 1em 0;
+    background: linear-gradient(#fff, lighten($palePrimary, 10));
+
+    .top-sponsors-headline {
+      text-align: center;
+      color: $gray30;
+
+      h3 {
+        font-weight: 400;
+        font-size: 1em;
+        margin-bottom: 1.8em;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+
+    .top-sponsors-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a.sponsor-logo-link {
+        padding: 0 2em;
+        margin: 0;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .sponsor-twosigma {
+      width: 180px;
+      margin-top: 10px;
+
+      @media (max-width: 768px) {
+        padding-top: 10px;
+      }
+    }
+
+    .sponsor-comcast {
+      width: 140px;
+    }
+  }
+
 }
