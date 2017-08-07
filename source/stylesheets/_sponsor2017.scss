@@ -64,6 +64,14 @@
         height: 100px;
       }
     }
+
+    img.sponsor-codequill {
+      width: 60%;
+      @media (min-width: 1000px) {
+        width: 80%;
+        height: 100px;
+      }
+    }
   }
 
   img.sponsor-comcast {
