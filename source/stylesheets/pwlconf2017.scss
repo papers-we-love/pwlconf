@@ -160,3 +160,32 @@ body {
     @extend .photo-col;
   }
 }
+
+
+// Lunch
+// ===============
+.lunch {
+  .lunch-headline {
+    @extend .headline-col;
+  }
+
+  .lunch-text {
+    @extend .text-col;
+  }
+
+  .lunch-photo {
+    @extend .photo-col;
+
+    h3 {
+      margin-top: 0;
+
+      @media (max-width: 768px) {
+        margin-top: 1em;
+      }
+
+      @media (max-width: 1000px) {
+        margin-top: 1em;
+      }
+    }
+  }
+}
