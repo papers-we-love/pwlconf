@@ -34,3 +34,67 @@
 .mobile-img {
   display: none;
 }
+
+$phone: 450px;
+
+section.schedule {
+  @media (max-width: $phone) {
+    h3 {
+      text-align: center;
+    }
+  }
+
+  dl {
+    margin-top: 1.8em;
+
+    dt {
+      background: $gray10;
+      text-align: center;
+      min-width: 200px;
+      border-top: $gray10 1px solid;
+      font-weight: normal;
+
+      @media (max-width: $phone) {
+        display: block;
+        margin: 10px 0 0 0;
+        background: #fff;
+        font-weight: normal;
+        color: $gray80;
+      }
+    }
+
+    dd {
+      margin-left: 220px;
+      border-top: $gray10 1px solid;
+
+      &:hover {
+        background: lighten($lightSecondary, 20);
+        color: darken($secondary, 10);
+      }
+
+      @media (max-width: $phone) {
+        display: block;
+        margin: 0 0 10px 0;
+        text-align: center;
+        border-top: 0;
+      }
+    }
+
+    dd.speaker {
+      font-weight: 700;
+      span {
+        font-weight: normal;
+        color: $gray60;
+
+        @media (max-width: $phone) {
+          display: block;
+        }
+      }
+    }
+
+    dt, dd {
+      padding: 5px 10px;
+      font-size: 2rem;
+    }
+  }
+}
