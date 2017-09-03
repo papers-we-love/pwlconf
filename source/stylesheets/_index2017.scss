@@ -49,34 +49,42 @@ section.schedule {
 
     dt {
       background: $gray10;
-      text-align: center;
-      min-width: 200px;
-      border-top: $gray10 1px solid;
+      border-top: $gray30 1px solid;
       font-weight: normal;
+      min-height: 75px;
+      min-width: 200px;
+      padding: 10px;
+      text-align: center;
 
       @media (max-width: $phone) {
-        display: block;
-        margin: 10px 0 0 0;
-        background: #fff;
-        font-weight: normal;
+        background: $gray10;
+        border-top: 0;
         color: $gray80;
+        display: block;
+        font-weight: normal;
+        margin: 10px 0 0 0;
+        min-height: 0;
+        padding: 5px;
       }
     }
 
     dd {
-      margin-left: 220px;
       border-top: $gray10 1px solid;
+      margin-left: 220px;
+      min-height: 75px;
+      padding: 10px;
 
       &:hover {
-        background: lighten($lightSecondary, 20);
-        color: darken($secondary, 10);
+        background: lighten($lightPrimary, 30);
       }
 
       @media (max-width: $phone) {
+        border-top: 0;
         display: block;
         margin: 0 0 10px 0;
+        min-height: 0;
+        padding: 5px;
         text-align: center;
-        border-top: 0;
       }
     }
 
@@ -84,16 +92,11 @@ section.schedule {
       font-weight: 700;
       span {
         font-weight: normal;
-        color: $gray60;
-
-        @media (max-width: $phone) {
-          display: block;
-        }
+        display: block;
       }
     }
 
     dt, dd {
-      padding: 5px 10px;
       font-size: 2rem;
     }
   }
