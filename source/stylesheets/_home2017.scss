@@ -26,43 +26,64 @@
 
   .showcase-text {
     @include make-md-column(12);
-    padding-bottom: 3em;
 
-    h2 {
-      text-align: center;
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    font-size: 1.2em;
+    padding: 0.5em 0;
+    background: $paleSecondary;
+    border: $secondary 1px solid;
+    border-radius: 3px;
+    text-align: center;
+
+    @media (max-width: 375px) {
+      border: 0px;
     }
 
     p {
       text-align: center;
       font-size: 1.4em;
+      margin: 0 1em;
+      padding: 0.5em;
 
-      &.ticket-callout {
-        margin: 0 0 1.4em 0;
-        font-size: 1.8em;
-        padding: 0.5em;
-        background: $paleSecondary;
-        border: $secondary 1px solid;
-        border-radius: 6px;
-        text-align: center;
+      &.text-container {
+        flex-grow: 2;
+      }
 
-        button {
-          margin: 0.8em 0 0.5em 0;
-          font-size: 1.2em;
-          background-color: $primary;
+      &.button-container {
+        text-align: right;
+
+        @media (max-width: 375px) {
+          text-align: center;
         }
 
         @media (max-width: 768px) {
-          padding: 1em 0.5em;
+          text-align: left;
+        }
+      }
+
+      button {
+        margin: 8px 0;
+        font-size: 1.2em;
+        background-color: $primary;
+      }
+
+      span {
+        @media (min-width: 768px) {
+          display: block;
         }
       }
 
       @media (max-width: 768px) {
         text-align: left;
+        font-size: 1.2em;
       }
     }
 
     @media (max-width: 768px) {
-      padding-bottom: 0;
+      //padding-bottom: 0;
     }
   }
 
@@ -163,7 +184,13 @@
   .top-sponsors {
     @include make-md-column(12);
     padding: 1em 0;
-    background: linear-gradient(#fff, lighten($palePrimary, 10));
+
+    border-top: $gray10 1px solid;
+    border-bottom: $gray10 1px solid;
+
+    @media (max-width: 375px) {
+      border-top: 0px;
+    }
 
     .top-sponsors-headline {
       text-align: center;
@@ -182,8 +209,42 @@
 
     .top-sponsors-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      padding: 1em 0;
+
+      @media (max-width: 375px) {
+        display: block;
+        padding: 1em;
+      }
+
+      .home-logos {
+        flex-width: 2;
+        display: flex;
+
+        @media (max-width: 375px) {
+          display: block;
+        }
+
+        h3 {
+          font-size: 1em;
+        }
+      }
+
+      .home-slack {
+        p {
+          font-size: 1.4em;
+
+          @media (max-width: 768px) {
+            padding-left: 10px;
+          }
+
+          @media (max-width: 375px) {
+            font-size: 1.2em;
+            text-align: center;
+            padding-bottom: 1em;
+          }
+        }
+      }
 
       a.sponsor-logo-link {
         padding: 0 2em;
@@ -198,7 +259,7 @@
       margin-top: 10px;
 
       @media (max-width: 768px) {
-        padding-top: 10px;
+        padding-top: 0px;
       }
     }
 

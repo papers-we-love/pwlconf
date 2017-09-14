@@ -16,28 +16,26 @@ og_title: Papers We Love Conference 2017
 
 <article class="container home">
   <section>
-    <div class="showcase-headline">
-      <!-- <h1>We're ready for 2017!</h1>  -->
-    </div>
     <div class="showcase-text">
-      <p class="ticket-callout">
-        <strong>Purchase tickets from the <a href="https://ti.to/strange-loop/2017">Strange Loop Registration</a> Page</strong><br />
-        Tickets for Papers We Love Conf are <strong>$40</strong> and include lunch.<br />
+      <p class="text-container">
+        <strong>Purchase tickets from the <a href="https://ti.to/strange-loop/2017">Strange Loop Registration</a> Page</strong>
+        <span>Tickets for Papers We Love Conf are <strong>$40</strong> and include lunch.</span>
+      </p>
+      <p class="button-container">
         <button onclick="bannerClick()" type="button" class="btn btn-primary btn-lg">Buy Tickets Now</button>
       </p>
-
-      <h2>Join our Slack</h2>
-      <p><a href="http://papersweloveslack.herokuapp.com/">Sign up for the Papers We Love Slack</a> to keep up with the latest developments and get in touch with fellow attendees.</p>
     </div>
   </section>
   <section>
     <div class="container top-sponsors">
-      <div class="top-sponsors-headline">
-        <h3>PWLConf 2017 Sponsors</h3>
-      </div>
       <div class="top-sponsors-container">
-        <a class="sponsor-logo-link" href="http://jobs.comcast.com/"><%= image_tag '2017/Comcast.svg', :alt => "Comcast", :title => "Platinum Sponsor Comcast", :class => "sponsor-comcast" %></a>
-        <a class="sponsor-logo-link" href="https://www.twosigma.com/careers"><%= image_tag '2017/TwoSigma.svg', :alt => "TwoSigma", :title => "Platinum Sponsor TwoSigma", :class => "sponsor-twosigma" %></a>
+        <div class="home-slack">
+          <p><strong><a href="http://papersweloveslack.herokuapp.com/">Sign up for the Papers We Love Slack</a></strong> to keep up with the latest developments and get in touch with fellow attendees.</p>
+        </div>
+        <div class="home-logos">
+          <a class="sponsor-logo-link" href="http://jobs.comcast.com/"><%= image_tag '2017/Comcast.svg', :alt => "Comcast", :title => "Platinum Sponsor Comcast", :class => "sponsor-comcast" %></a>
+          <a class="sponsor-logo-link" href="https://www.twosigma.com/careers"><%= image_tag '2017/TwoSigma.svg', :alt => "TwoSigma", :title => "Platinum Sponsor TwoSigma", :class => "sponsor-twosigma" %></a>
+        </div>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@ og_title: Papers We Love Conference 2017
     <h3>Conference Schedule</h3>
     <dl class="dl-horizontal">
       <dt>8:00 - 9:25 AM</dt>
-      <dd>Registration</dd>
+      <dd>Registration - <a href="http://curiocollection3.hilton.com/resources/media/qq/STLCUQQ/en_US/pdf/STLCU.Floorplans.Apr26.pdf">Grand Ballroom E & F (map)</a><br /></dd>
 
       <dt>9:25 - 9:30 AM</dt>
       <dd>Opening</dd>
@@ -116,7 +114,7 @@ og_title: Papers We Love Conference 2017
       <dt>9:30 - 10:20 AM</dt>
       <dd class="speaker">
         <a href="/2017/heather-miller">
-          Heather Miller
+          <span>What happened to distributed programming <br />languages?</span> Heather Miller
         </a>
       </dd>
 
@@ -196,6 +194,11 @@ og_title: Papers We Love Conference 2017
           1820 Market St.<br />
           St. Louis, MO 63103<br />
           (314) 231-1234<br />
+        </dd>
+        <dt>Room</dt>
+        <dd>
+          <a href="http://curiocollection3.hilton.com/resources/media/qq/STLCUQQ/en_US/pdf/STLCU.Floorplans.Apr26.pdf">Grand Ballroom E & F (map)</a><br />
+          There will be coffee/tea/beverages in Foyer A
         </dd>
       </dl>
     </div>
