@@ -65,6 +65,19 @@
       }
     }
 
+    img.sponsor-evoxlabs {
+      width: auto;
+      height: 100px;
+
+      @media (min-width: 1000px) {
+        width: auto;
+      }
+      @media (max-width: 412px) {
+        width: auto;
+        height: 100px;
+      }
+    }
+
     img.sponsor-codequill {
       width: 60%;
       @media (min-width: 1000px) {
