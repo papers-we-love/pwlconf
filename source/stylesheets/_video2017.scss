@@ -1,0 +1,33 @@
+@import "variables";
+
+.video {
+  text-align: center;
+
+  iframe.video-embed {
+    height: 563px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      height: 338px;
+    }
+
+    @media (max-width: 375px) {
+      width: 95%;
+      height: 158px;
+    }
+  }
+}
+
+.speaker-text > .video {
+  margin-bottom: 10px;
+}
+
+.speaker-text > .video > .video-embed {
+  height: 450px;
+
+  @media (max-width: 375px) {
+    height: 158px;
+  }
+}
