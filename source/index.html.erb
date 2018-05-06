@@ -2,197 +2,38 @@
 title: Home
 og_title: Papers We Love Conference 2018
 ---
-<%= partial '2017/partials/indexTopnav' %>
-
-<div class="home-main-image">
-  <img class="desktop-img" src="/images/2017/pwl-desktop-header-ALT.png"/>
-  <img class="mobile-img" src="/images/2017/pwl-mobile-header-ALT.png"/>
-</div>
-
-<div class="mobile-text">
-  <p>September 28, 2017</p>
-  <p>St. Louis, MO</p>
-</div>
-
-<article class="container home">
-  <section>
-    <div class="container top-sponsors">
-      <div class="top-sponsors-container">
-        <div class="home-slack">
-          <p><strong><a href="http://papersweloveslack.herokuapp.com/">Sign up for the Papers We Love Slack</a></strong> to keep up with the latest developments and get in touch with fellow attendees.</p>
-        </div>
-        <div class="home-logos">
-          <a class="sponsor-logo-link" href="http://jobs.comcast.com/"><%= image_tag '2017/Comcast.svg', :alt => "Comcast", :title => "Platinum Sponsor Comcast", :class => "sponsor-comcast" %></a>
-          <a class="sponsor-logo-link" href="https://www.twosigma.com/careers"><%= image_tag '2017/TwoSigma.svg', :alt => "TwoSigma", :title => "Platinum Sponsor TwoSigma", :class => "sponsor-twosigma" %></a>
-        </div>
-      </div>
+<header class="index">
+  <nav>
+    <div class="g max-width-container">
+      <!-- <a href="#"><i class="fas fa-ticket-alt"></i> Buy Tickets!</a> -->
+      <a href="/2018/code-of-conduct">Code of Coduct</a>
+      <a href="#">Sponsors</a>
+      <a href="#">Become a Sponsor</a>
     </div>
-  </section>
-  <section>
-    <div class="container video">
-      <iframe class="video-embed" src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShRY94F1p_3TT1HMoipcc3c" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-  <section>
-    <div class="container speakers">
-      <div class="speakers-headline">
-        <h1>Speakers</h1>
-      </div>
-      <div class="speaker-list">
-        <div>
-          <a href="/2017/kenichi-asai">
-            <img alt="Kenichi Asai" src="/images/2017/kenichi_asai_300.jpg" />
-          </a>
-          <a href="/2017/kenichi-asai">
-            <h3>Kenichi Asai</h3>
-          </a>
-          <h4><a href="http://www.is.ocha.ac.jp/index_e.html">Ochanomizu University</a></h4>
-        </div>
-        <div>
-          <a href="/2017/elaine-chew">
-            <img src="/images/2017/elaine_chew_300.jpg" />
-          </a>
-          <a href="/2017/elaine-chew">
-            <h3>Elaine Chew</h3>
-          </a>
-          <h4><a href="http://eecs.qmul.ac.uk/">Queen Mary University of London</a></h4>
-        </div>
-        <div>
-          <a href="/2017/chas-emerick">
-            <img src="/images/2017/chas_emerick_300.jpg" />
-          </a>
-          <a href="/2017/chas-emerick">
-            <h3>Chas Emerick</h3>
-          </a>
-          <h4><a href="https://www.pdfdata.io/">PDFDATA.io</a></h4>
-        </div>
-        <div>
-          <a href="/2017/ron-garcia">
-            <img src="/images/2017/ron_garcia_300.jpg" />
-          </a>
-          <a href="/2017/ron-garcia">
-            <h3>Ronald Garcia</h3>
-          </a>
-          <h4><a href="http://www.cs.ubc.ca">University of British Columbia</a></h4>
-        </div>
-        <div>
-          <a href="/2017/james-long">
-            <img alt="James Long" src="/images/2017/james_long_300.jpg" />
-          </a>
-          <a href="/2017/james-long">
-            <h3>James Long</h3>
-          </a>
-          <h4><a href="http://shiftreset.co/">Shift Reset LLC</a></h4>
-        </div>
-        <div>
-          <a href="/2017/heather-miller">
-            <img src="/images/2017/heather_miller_300.jpg" />
-          </a>
-          <a href="/2017/heather-miller">
-            <h3>Heather Miller</h3>
-          </a>
-          <h4><a href="https://scala.epfl.ch/">Scala Center at EPFL</a></h4>
-        </div>
-        <div>
-          <a href="/2017/fabienne-serriere">
-            <img alt="Fabien Serrière" src="/images/2017/fabienne_serriere_300.jpg" />
-          </a>
-          <a href="/2017/fabienne-serriere">
-            <h3>Fabienne Serrière</h3>
-          </a>
-          <h4><a href="https://www.kickstarter.com/projects/fbz/knityak-custom-mathematical-knit-scarves">KnitYak</a></h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="schedule" >
-    <h3>Conference Schedule</h3>
-    <dl class="dl-horizontal">
-      <dt>9:30 - 10:20 AM</dt>
-      <dd class="speaker">
-        <a href="/2017/kenichi-asai">
-          <span>Delimited Continuations for Everyone</span> Kenichi Asai
-        </a>
-      </dd>
+  </nav>
+  <h1>
+    <span class="max-width-container">
+      <%= image_tag '2018/mobile-header.png', :alt => "Drawing of the Peabody Opera House in St. Louis", :title => "Papers We Love Conference 2018", :class => "mobile-img" %>
+      <%= image_tag '2018/header.png', :alt => "Drawing of the Peabody Opera House in St. Louis", :title => "Papers We Love Conference 2018", :class => "desktop-img" %>
+    </span>
+  </h1>
+  <h2>
+    September 26, 2018
+  </h2>
+  <h3>
+    Peabody Opera House<br/>
+    St. Louis, MO
+  </h3>
+</header>
+<article class="text indexText">
+  <h1>Getting ready for 2018!</h1>
+  <p>We're very excited to be back in St. Louis as part of the <a href="https://thestrangeloop.com/preconf.html">Strangeloop Pre-Conf</a> program for the third year in a row. This year should be pretty exciting as <a href="https://icfp18.sigplan.org/home">ICFP 2018</a> will be co-located in St. Louis as well.</p>
 
-      <dt>10:30 - 11:20 AM</dt>
-      <dd class="speaker">
-        <a href="/2017/elaine-chew">
-          <span>Decoding the Sensuality in Music</span> Elaine Chew
-        </a>
-      </dd>
+  <p>We are working hard to put together another great program for you and will post updates here as they develop. You can also <a href="https://twitter.com/papers_we_love" title="@papers_we_love">follow us on Twitter</a> or  <a href="http://papersweloveslack.herokuapp.com/" title="Join our Slack">join our Slack</a> to get updates. If you're not familiar with Papers We Love Conf then checkout the videos from our previous events.</p>
 
-      <dt>12:50 - 1:40 PM</dt>
-      <dd class="speaker">
-        <a href="/2017/james-long">
-          <span>My History with Papers</span> James Long
-        </a>
-      </dd>
+  <h2><a href="/2017">2017</a></h2>
+  <iframe class="video-embed" src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShRY94F1p_3TT1HMoipcc3c" frameborder="0" allowfullscreen></iframe>
 
-      <dt>1:50 - 2:40 PM</dt>
-      <dd class="speaker">
-        <a href="/2017/ron-garcia">
-          <span>What type of thing is a type?</span> Ron Garcia
-        </a>
-      </dd>
-
-      <dt>3:25 - 4:15 PM</dt>
-      <dd class="speaker">
-        <a href="/2017/chas-emerick">
-          <span>Programming data for display, the PDF Story</span> Chas Emerick
-        </a>
-      </dd>
-
-      <dt>4:25 - 5:15 PM</dt>
-      <dd class="speaker">
-        <a href="/2017/fabienne-serriere">
-          <span>Knittable Seashells</span> Fabienne Serrière
-        </a>
-      </dd>
-
-      <dt>9/28 4:10 - 5:15 PM</dt>
-      <dd class="speaker">
-        <a href="/2017/heather-miller">
-          <span>What happened to distributed programming <br />languages?</span> Heather Miller
-        </a>
-      </dd>
-
-    </dl>
-  </section>
-  <section>
-    <div class="location-details">
-      <h3>Conference location</h3>
-      <dl class="dl-horizontal">
-        <dt>Date</dt>
-        <dd>September 28, 2017</dd>
-        <dt>Address</dt>
-        <dd>
-          <a href="http://curiocollection3.hilton.com/en/hotels/missouri/st-louis-union-station-hotel-curio-collection-by-hilton-STLCUQQ/index.html">St. Louis Union Station Hotel</a><br />
-          1820 Market St.<br />
-          St. Louis, MO 63103<br />
-          (314) 231-1234<br />
-        </dd>
-        <dt>Room</dt>
-        <dd>
-          <a href="http://curiocollection3.hilton.com/resources/media/qq/STLCUQQ/en_US/pdf/STLCU.Floorplans.Apr26.pdf">Grand Ballroom E & F (map)</a><br />
-          There will be coffee/tea/beverages in Foyer A
-        </dd>
-        <dt>Pre-Party</dt>
-        <dd>
-          September 27, 2017<br />
-          <a href="http://www.alphabrewingcompany.com">Alpha Brewing Co.</a><br />
-          <a href=" https://www.facebook.com/AlphaBrewingCo/">(Facebook)</a><br />
-          8 - 11pm
-        </dd>
-      </dl>
-    </div>
-    <div class="location-map">
-      <iframe title="Map to venue" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8568557751055!2d-90.20978068465753!3d38.62917397961295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31de5f5865d%3A0xa0a4a4e039774dd1!2sSt.+Louis+Union+Station+Hotel%2C+Curio+Collection+by+Hilton!5e0!3m2!1sen!2sus!4v1506013072809" frameborder="0" style="border:0" allowfullscreen class="venueMap"></iframe>
-    </div>
-  </section>
+  <h2><a href="/2016">2016</a></h2>
+  <iframe class="video-embed" src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShwIXMA5P3WR_9LgBOAdvw4" frameborder="0" allowfullscreen></iframe>
 </article>
-<script>
- function bannerClick(e) {
-   window.location.href="https://ti.to/strange-loop/2017";
- }
-</script>
