@@ -25,7 +25,11 @@ with_layout :pwlconf2017 do
   page "/2017/*"
 end
 
-with_layout :pwlconf2017 do
+with_layout :pwlconf2018 do
+  page "/2018/*"
+end
+
+with_layout :pwlconf2018 do
   page "/"
 end
 

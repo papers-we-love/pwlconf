@@ -12,12 +12,12 @@ gem "middleman-ogp"
 gem "builder", "~> 3.0"
 
 # XML parsing for great justice
-gem "nokogiri", "~> 1.6.7"
+gem "nokogiri", "~> 1.8.1"
 
 # SASS and friends
 gem 'sass'
-gem 'bourbon'
-gem 'neat'
+gem 'bourbon', "4.3.4"
+gem 'neat', "~> 1.9.0"
 
 # Sanitizers
 gem 'sanitize', '~> 3.1.1'
