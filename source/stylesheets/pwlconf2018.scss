@@ -344,9 +344,7 @@ footer {
   }
 }
 
-// Prospectus
-// ==========
-.prospectus {
+%internalContainer {
   margin: 0 $containerPadding;
   padding-top: 20px !important;
 
@@ -355,6 +353,105 @@ footer {
     margin: 0 auto;
     padding: 0 $containerPadding;
   }
+}
+
+// Sponsors
+// ========
+
+.sponsors {
+  @extend %internalContainer;
+
+  .silver {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .one {
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+
+    .two {
+      grid-column: 2/2;
+      grid-row: 1;
+    }
+
+    .sponsor-cerner {
+      width: 70%;
+      margin: 10px 0;
+      @media (min-width: $tablet) {
+         margin: 20px 0 40px 0;
+      }
+    }
+
+    .sponsor-acm {
+      width: 80%;
+      @media (min-width: $tablet) {
+        width: 70%;
+      }
+    }
+  }
+
+  .bronze {
+    .sponsor-comcast {
+      width: 60%;
+      margin-bottom: 20px;
+      @media (min-width: $tablet) {
+        width: 30%;
+      }
+    }
+  }
+
+  .specific {
+    @media (min-width: $tablet) {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-gap: 10px;
+      grid-auto-rows: 200px;
+    }
+
+    .one {
+
+      text-align: center;
+    }
+
+    .two {
+      text-align: center;
+    }
+
+    .three {
+      text-align: center;
+    }
+
+    img.sponsor-datadog {
+      width: 60%;
+      @media (min-width: $tablet) {
+        width: 80%;
+      }
+    }
+
+    img.sponsor-hashicorp {
+      width: 60%;
+      @media (min-width: $tablet) {
+        width: 80%;
+      }
+    }
+  }
+}
+
+a.sponsor-logo-link {
+  display: block;
+  text-align: center;
+}
+
+// Prospectus
+// ==========
+.prospectus {
+  @extend %internalContainer;
 
   div.photo {
     margin: 0;
@@ -405,8 +502,7 @@ footer {
 // ===============
 
 .coc {
-  margin: 0 $containerPadding;
-  padding-top: 20px !important;
+   @extend %internalContainer;
 
   .g {
     --grid-columns: 1;
