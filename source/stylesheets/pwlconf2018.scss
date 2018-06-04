@@ -147,14 +147,15 @@ ul.speakers-grid {
     }
 
     img.speaker {
-      // width: 75%;
       margin: 0;
       padding: 0;
       clip-path: circle(160px);
+      -webkit-clip-path: circle(160px);
 
       @media (min-width: $tablet) {
         width: 95%;
         clip-path: circle(158px);
+        -webkit-clip-path: circle(158px);
       }
     }
 
