@@ -124,7 +124,6 @@ header.internal {
 // Index Page
 // ==========
 
-
 ul.speakers-grid {
   padding: 0;
   margin: 0;
@@ -142,13 +141,20 @@ ul.speakers-grid {
     margin: 0 0 30px 0 !important;
     text-align: center;
 
-    img {
-      width: 75%;
-      clip-path: circle(135px at center);
+    a {
+      padding: 0;
+      margin: 0;
+    }
+
+    img.speaker {
+      // width: 75%;
+      margin: 0;
+      padding: 0;
+      clip-path: circle(160px);
 
       @media (min-width: $tablet) {
-        width: 90%;
-        clip-path: circle(150px at center);
+        width: 95%;
+        clip-path: circle(158px);
       }
     }
 
