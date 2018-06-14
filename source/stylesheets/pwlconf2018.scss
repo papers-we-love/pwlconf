@@ -435,6 +435,15 @@ footer {
 .sponsors {
   @extend %internalContainer;
 
+  .gold {
+    .one {
+      img {
+        width: 85%;
+      }
+    }
+
+  }
+
   .silver {
     @media (min-width: $tablet) {
       display: grid;
