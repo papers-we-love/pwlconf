@@ -177,6 +177,26 @@ ul.speakers-grid {
   li.col-2 {
     grid-column: 2/2;
   }
+
+  li.col-ctr {
+    margin: 0;
+    padding: 0;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    text-align: center;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    img.speaker {
+      clip-path: circle(160px);
+      -webkit-clip-path: circle(160px);
+
+      @media (min-width: $tablet) {
+        width: 50%;
+        clip-path: circle(158px);
+        -webkit-clip-path: circle(158px);
+      }
+    }
+  }
 }
 
 header.index {
