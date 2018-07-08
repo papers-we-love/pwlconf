@@ -603,10 +603,15 @@ a.sponsor-logo-link {
 
     li {
       font-family: $sans;
+      font-size: 1.1rem;
       margin: 0 0 10px 20px;
 
+      ul {
+        margin: 20px 0;
+      }
+
       a {
-        font-family: $serif;
+        font-family: $sans;
       }
     }
   }
