@@ -344,6 +344,48 @@ article.indexText {
   }
 }
 
+article.tickets {
+  margin: 40px $containerPadding;
+  text-align: center;
+
+  padding: 20px;
+  background-color: $bgBlue;
+  border-radius: 8px;
+
+  font-family: $serif;
+  font-size: 1.4rem;
+
+  button {
+    background: $blue;
+    border-color: darken($bgBlue, 30);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px lighten($bgBlue, 10);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $serif;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px;
+
+    &:hover {
+      background: $coral;
+      border-color: lighten($coral, 20);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    max-width: $containerWidth / 2;
+    margin: 40px auto;
+
+    button {
+      margin-top: 0;
+    }
+  }
+
+}
+
 // Footer
 // ======
 
