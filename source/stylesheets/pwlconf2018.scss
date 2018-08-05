@@ -479,8 +479,14 @@ footer {
 
   .gold {
     .one {
-      img {
+      .sponsor-twosigma {
         width: 85%;
+      }
+
+      .sponsor-droit {
+        max-width: 40%;
+        height: 75%;
+        margin-bottom: 20px;
       }
     }
 
