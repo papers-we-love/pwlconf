@@ -1,7 +1,9 @@
 ---
 title: Roopsha Samanta
+description: Computer-aided Concurrent Programming by Clarke and Emerson
 og_title: Roopsha Samanta | Papers We Love Conference 2018
 og_image: https://pwlconf.org/images/2018/roopsha-samanta-square.jpg
+og_image_type: 'image/jpeg'
 og_height: 800
 og_width: 800
 og_image_alt: Photo of Roopsha Samanta
@@ -15,6 +17,21 @@ og_image_alt: Photo of Roopsha Samanta
       <div class="photo">
         <%= image_tag '2018/roopsha-samanta-square.jpg', :width => "100%", :alt => "Photo of Roopsha Samanta", :title => "Roopsha Samanta" %>
       </div>
+
+      <h2 class="title">Computer-aided Concurrent Programming</h2>
+
+      <p>Concurrent programs are notoriously difficult to write, verify, and debug. Concurrency bugs are as commonplace as concurrent programs themselves, and often arise due to subtle synchronization errors. This makes concurrent programs excellent targets for computer-aided programming, and, in particular, for automated generation of synchronization code.</p>
+      <p>Unsurprisingly, synchronization synthesis has been a long-standing interest in the formal methods and programming languages community since the early 1980s. An interesting piece of history is that the seminal <a href="http://www.cs.cmu.edu/~emc/papers/Conference%20Papers/Design%20and%20Synthesis%20of%20Synchronization%20Skeletons.pdf">1981 paper of Clarke and Emerson</a>, which founded the highly successful area of model checking (recognized with a Turing Award in 2007), was, in fact, a paper on synthesis of synchronization from temporal logic specifications. The community has come a long way since then, with several practical and scalable solutions for synthesis of synchronization and coordination for concurrent and distributed programs.</p>
+      <p>In this talk, Roopsha will highlight some of these contributions, with an emphasis on recent advances in a trace-based approach that is applicable to device driver programming. She will end the talk with a preview of an ongoing project on parameterized synthesis of coordination for distributed applications.</p>
+
+      <h3 id="references">References</h3>
+      <ul>
+        <li><a href="http://www.cs.cmu.edu/~emc/papers/Conference%20Papers/Design%20and%20Synthesis%20of%20Synchronization%20Skeletons.pdf">Design and Synthesis of Synchronization Skeletons Using Branching-Time Temporal Logic</a> by E. M. Clarke and E. A. Emerson</li>
+        <li><a href="http://www.cs.technion.ac.il/~yahave/papers/popl10.pdf">Abstraction-Guided Synthesis of Synchronization</a> by M. Vechev, E. Yahav, and G. Yorsh</li>
+        <li><a href="https://www.cs.purdue.edu/homes/roopsha/papers/succtraceset.pdf">Succinct Representation of Concurrent Trace Sets</a> by A. Gupta, T. A. Henzinger, A. Radhakrishna, R. Samanta, and T. Tarrach</li>
+        <li><a href="https://www.cs.purdue.edu/homes/roopsha/papers/specfreesynth.pdf">From Non-preemptive to Preemptive Scheduling using Synchronization Synthesis</a> by P. ˇCern ́y, E. M. Clarke, T. A. Henzinger, A. Radhakrishna, L. Ryzhyk, R. Samanta, and T. Tarrach</li>
+        <li><a href="https://users.ics.aalto.fi/stavros/papers/sigact2017.pdf">Automatic Synthesis of Distributed Protocols</a> by R. Alur and S. Tripakis</li>
+      </ul>
 
       <h3>Biography</h3>
 

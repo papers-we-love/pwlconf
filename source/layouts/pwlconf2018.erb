@@ -23,7 +23,7 @@ unless current_page.data.og_title.nil?
 end
 
 unless current_page.data.description.nil?
-  description = current_page.data.description
+  description = current_page.data.description + ' | ' + description
 end
 
 unless current_page.data.og_image.nil?
