@@ -124,6 +124,51 @@ header.internal {
 // Index Page
 // ==========
 
+ul.conference-schedule {
+  padding: 10px 0 40px 0 !important;
+  margin: 0;
+
+  li {
+      list-style-type: none;
+      margin-left: 0 !important;
+      padding-left: 10px !important;
+      border-left: $blue 4px solid;
+
+      strong {
+        display: block;
+        font-family: $sans;
+        color: darken($blue, 20);
+      }
+
+      p {
+        margin: 5px 0 20px 0;
+        font-family: $serif;
+        a {
+        }
+      }
+  }
+
+  li.break {
+    padding-bottom: 5px;
+    border-left: $gray20 4px solid;
+
+    strong {
+      display: inline-block;
+    }
+
+    p {
+      display: inline-block !important;
+      margin: 0 0 0 10px !important;
+      font-weight: bold;
+
+      em {
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+  }
+}
+
 ul.speakers-grid {
   padding: 0;
   margin: 0;
@@ -329,6 +374,7 @@ header.index {
     margin: 0;
   }
 }
+
 
 article.indexText {
   margin: 0 $containerPadding;
