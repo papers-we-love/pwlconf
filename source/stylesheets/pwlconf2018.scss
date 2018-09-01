@@ -124,6 +124,27 @@ header.internal {
 // Index Page
 // ==========
 
+div.promo-acm {
+  border-bottom: $gray30 1px solid;
+  border-top: $gray30 1px solid;
+  padding: 1.4em;
+  text-align: center;
+  p {
+    font-family: $serif;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+
+  @media (min-width: $tablet) {
+    display: flex;
+    p {
+      padding-top: 30px;
+    }
+  }
+
+}
+
 ul.conference-schedule {
   padding: 10px 0 40px 0 !important;
   margin: 0;
@@ -361,6 +382,9 @@ header.index {
     color: $coral;
     text-align: center;
     font-family: $serif;
+    a {
+      color: $coral;
+    }
   }
 
   h2 {
@@ -606,6 +630,7 @@ footer {
 
     img.sponsor-datadog {
       width: 60%;
+      margin-bottom: 8px;
       @media (min-width: $tablet) {
         width: 80%;
       }
@@ -613,8 +638,17 @@ footer {
 
     img.sponsor-hashicorp {
       width: 60%;
+      margin-bottom: 14px;
       @media (min-width: $tablet) {
         width: 80%;
+      }
+    }
+
+    img.sponsor-codequill {
+      width: 80%;
+      margin-bottom: none;
+      @media (min-width: $tablet) {
+        width: 90%;
       }
     }
   }
