@@ -554,9 +554,13 @@ footer {
       }
 
       .sponsor-droit {
-        max-width: 40%;
-        height: 75%;
+        max-width: 60%;
+        height: 85%;
         margin-bottom: 20px;
+        @media (min-width: $tablet) {
+          max-width: 40%;
+          height: 75%;
+        }
       }
     }
 
@@ -597,11 +601,27 @@ footer {
   }
 
   .bronze {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
     .sponsor-comcast {
       width: 60%;
       margin-bottom: 20px;
       @media (min-width: $tablet) {
-        width: 30%;
+        width: 60%;
+      }
+    }
+
+    .sponsor-fastly {
+      width: 60%;
+      margin-top: 34px;
+      margin-bottom: 10px;
+      @media (min-width: $tablet) {
+        width: 40%;
       }
     }
   }
