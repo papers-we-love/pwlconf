@@ -29,7 +29,11 @@ with_layout :pwlconf2018 do
   page "/2018/*"
 end
 
-with_layout :pwlconf2018 do
+with_layout :pwlconf2019 do
+  page "/2019/*"
+end
+
+with_layout :pwlconf2019 do
   page "/"
 end
 
