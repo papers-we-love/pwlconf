@@ -1,3 +1,11 @@
+body {
+  text-align: center;
+}
+
+#main {
+  text-align: left;
+}
+
 .svg-icon-twitter {
   width: 60px;
   height: 60px;
@@ -14,4 +22,10 @@
   width: 120px;
   height: 120px;
   margin-left: -10px;
+}
+
+.max-width {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
