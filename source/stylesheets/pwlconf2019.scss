@@ -33,8 +33,7 @@ body {
 #top-nav-background {
   position: absolute;
   z-index: 1;
-  left: -10px;
-  width: 110%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -42,8 +41,29 @@ body {
   background: transparent;
   position: relative;
   z-index: 3;
+  overflow: hidden;
+}
+
+#top-nav-links {
+  background: transparent;
+  position: relative;
+  z-index: 3;
 }
 
 #background-content {
-  opacity: .35;
+  opacity: 0.25;
+  display: block;
+  overflow: hidden;  
+}
+
+.automata-container {
+  overflow: hidden;
+}
+
+.automata-row {
+  font-size: 11px;
+  height: 12px;
+  width: 4000px;
+  overflow: hidden;
+  opacity: 0.25
 }

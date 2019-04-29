@@ -2,8 +2,9 @@
 title: Home
 og_title: Papers We Love Conference 2019
 ---
-<div id="top-nav-background" class="bg-blue avenir white">
-  <span id="background-content">Hello</span>
+<script src="/javascripts/automata.js"></script>
+<div id="top-nav-background" class="bg-blue white code">
+  <span id="background-content"></span>
 </div>
 <div id="top-nav-content" class="avenir">
   <div class="ph4 pt3 pt6-ns pb3 pl5-ns pr5-ns max-width">
@@ -15,7 +16,7 @@ og_title: Papers We Love Conference 2019
     </h2>
   </div>
 </div>
-<div class="bg-blue avenir">
+<div id="top-nav-links" class="bg-blue avenir">
   <div class="pt0 pb3 ph4 ph5-ns max-width">
     <div class="cf">
       <div class="fl w-100 w-third-ns pa2">
@@ -127,7 +128,14 @@ og_title: Papers We Love Conference 2019
  function adjustHeaderHeight() {
    const contentDiv = document.getElementById('top-nav-content');
    const bgDiv = document.getElementById('top-nav-background');
-   bgDiv.style.height = contentDiv.clientHeight + "px";
+   const topNavLinksDiv = document.getElementById('top-nav-links');
+   const headerHeight = contentDiv.clientHeight;
+   const linksHeight = topNavLinksDiv.clientHeight;
+   bgDiv.style.height = headerHeight + linksHeight + "px";
+   const automataContainer = document.getElementById("background-content");
+   if (automataContainer) {
+     automataContainer.innerHTML = window.Automata.generateAutomata(headerHeight + linksHeight);
+   }
  }
 
  const resizeListener = window.addEventListener('resize', adjustHeaderHeight);
