@@ -2,6 +2,25 @@
 title: Home
 og_title: Papers We Love Conference 2019
 ---
+<%
+speakers = [{
+  :speaker => "karim-ali",
+  :name => "Karim Ali",
+  :org => "University of Alberta"
+}, {
+  :speaker => "giulia-fanti",
+  :name => "Giulia Fanti",
+  :org => "Carnegie Mellon University"
+}, {
+  :speaker => "heidi-howard",
+  :name => "Heidi Howard",
+  :org => "Cambridge University"
+}, {
+  :speaker => "jose-trilla",
+  :name => "José Manuel Calderón Trilla",
+  :org => "Galois"
+}]
+%>
 <script src="/javascripts/automata.js"></script>
 <div id="top-nav-background" class="bg-blue white code">
   <span id="background-content"></span>
@@ -76,6 +95,34 @@ og_title: Papers We Love Conference 2019
     </p>
   </div>
 </div>
+<!-- Speakers -->
+<div class="cf ph4 ph5-ns pv0 pv0-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      Speakers
+    </h1>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <article>
+      <div class="cf pa2">
+        <% for speaker in speakers %>
+          <div class="fl w-100 w-50-m w-50-l pa2">
+            <a href="/2019/<%= speaker[:speaker] %>" class="db link dim tc">
+              <img src="/images/2019/<%= speaker[:speaker] %>.jpg" alt="photo of <%= speaker[:name] %>" class="w-100 db outline black-10"/>
+              <dl class="mt2 f4 lh-copy">
+                <dt class="clip">Speaker</dt>
+                <dd class="ml0 black truncate fw5"><%= speaker[:name] %></dd>
+                <dt class="clip">Organization</dt>
+                <dd class="ml0 gray truncate w-100"><%= speaker[:org] %></dd>
+              </dl>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </article>
+  </div>
+</div>
+
 <!-- Video 2018 -->
 <div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
   <header class="fn fl-ns w-100 w-third-ns pa2">
