@@ -1,3 +1,11 @@
+body {
+  text-align: center;
+}
+
+#main {
+  text-align: left;
+}
+
 .svg-icon-twitter {
   width: 60px;
   height: 60px;
@@ -14,4 +22,48 @@
   width: 120px;
   height: 120px;
   margin-left: -10px;
+}
+
+.max-width {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#top-nav-background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+#top-nav-content {
+  background: transparent;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#top-nav-links {
+  background: transparent;
+  position: relative;
+  z-index: 3;
+}
+
+#background-content {
+  opacity: 0.25;
+  display: block;
+  overflow: hidden;  
+}
+
+.automata-container {
+  overflow: hidden;
+}
+
+.automata-row {
+  font-size: 11px;
+  height: 12px;
+  width: 4000px;
+  overflow: hidden;
+  opacity: 0.25
 }

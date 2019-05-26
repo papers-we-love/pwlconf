@@ -2,8 +2,12 @@
 title: Home
 og_title: Papers We Love Conference 2019
 ---
-<div class="bg-blue avenir">
-  <div class="ph4 pt3 pt6-ns pb3 pl5-ns pr5-ns">
+<script src="/javascripts/automata.js"></script>
+<div id="top-nav-background" class="bg-blue white code">
+  <span id="background-content"></span>
+</div>
+<div id="top-nav-content" class="avenir">
+  <div class="ph4 pt3 pt6-ns pb3 pl5-ns pr5-ns max-width">
     <h1 class="f-4 mb2 f-headline-ns measure washed-blue">
       Papers We Love Conf <span class="normal">2019</span>
     </h1>
@@ -12,8 +16,8 @@ og_title: Papers We Love Conference 2019
     </h2>
   </div>
 </div>
-<div class="bg-blue avenir">
-  <div class="pt0 pb3 ph4 ph5-ns">
+<div id="top-nav-links" class="bg-blue avenir">
+  <div class="pt0 pb3 ph4 ph5-ns max-width">
     <div class="cf">
       <div class="fl w-100 w-third-ns pa2">
         <div class="bt b--washed-blue">
@@ -39,7 +43,7 @@ og_title: Papers We Love Conference 2019
     </div>
   </div>
 </div>
-<div class="cf ph4 ph5-ns pv3 pv5-ns mt3 mt5-ns avenir">
+<div class="cf ph4 ph5-ns pv3 pv5-ns mt3 mt5-ns avenir max-width">
   <header class="fn fl-ns w-100 w-third-ns pa2">
     <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
       The Road to 2019
@@ -47,7 +51,7 @@ og_title: Papers We Love Conference 2019
   </header>
   <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
     <p class="f4 lh-copy mt0-ns">
-      It's February 2019 and we're already gearing up for this year's Papers We
+      We're hard at work on this year's Papers We
       Love Conference as part of <a href="https://thestrangeloop.com/"
                                    class="link underline dark-blue hover-bg-yellow">
       Strange Loop</a>. We're planning another great conference this year,
@@ -73,7 +77,7 @@ og_title: Papers We Love Conference 2019
   </div>
 </div>
 <!-- Video 2018 -->
-<div class="cf ph4 ph5-ns pv3 pv5-ns avenir">
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
   <header class="fn fl-ns w-100 w-third-ns pa2">
     <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
       <a href="/2018" class="link purple hover-bg-light-pink">
@@ -89,7 +93,7 @@ og_title: Papers We Love Conference 2019
   </div>
 </div>
 <!-- Video 2017 -->
-<div class="cf ph4 ph5-ns pv3 pv5-ns avenir">
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
   <header class="fn fl-ns w-100 w-third-ns pa2">
     <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
       <a href="/2017" class="link purple hover-bg-light-pink">
@@ -105,7 +109,7 @@ og_title: Papers We Love Conference 2019
   </div>
 </div>
 <!-- Video 2016 -->
-<div class="cf ph4 ph5-ns pv3 pv5-ns avenir">
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
   <header class="fn fl-ns w-100 w-third-ns pa2">
     <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
       <a href="/2016" class="link purple hover-bg-light-pink">
@@ -120,3 +124,20 @@ og_title: Papers We Love Conference 2019
     </div>
   </div>
 </div>
+<script>
+ function adjustHeaderHeight() {
+   const contentDiv = document.getElementById('top-nav-content');
+   const bgDiv = document.getElementById('top-nav-background');
+   const topNavLinksDiv = document.getElementById('top-nav-links');
+   const headerHeight = contentDiv.clientHeight;
+   const linksHeight = topNavLinksDiv.clientHeight;
+   bgDiv.style.height = headerHeight + linksHeight + "px";
+   const automataContainer = document.getElementById("background-content");
+   if (automataContainer) {
+     automataContainer.innerHTML = window.Automata.generateAutomata(headerHeight + linksHeight);
+   }
+ }
+
+ const resizeListener = window.addEventListener('resize', adjustHeaderHeight);
+ adjustHeaderHeight()
+</script>
