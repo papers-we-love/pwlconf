@@ -1,5 +1,6 @@
 ---
 title: Heidi Howard, Cambridge University
+description: "Distributed consensus revised with Heidi Howard"
 og_title: Heidi Howard | Papers We Love Conference 2019
 og_image: https://pwlconf.org/images/2019/heidi-howard.jpg
 og_image_type: 'image/jpeg'
@@ -19,14 +20,40 @@ og_image_alt: Photo of Heidi Howard
     <img src="/images/2019/heidi-howard.jpg" alt="photo of Heidi Howard" class="db w-100 mv4"/>
   </header>
   <div class="fn fl-ns w-100 w-two-thirds-ns pa2 pl4-ns">
+    <h2 class="f2 lh-subtitle mt0 pt0">Distributed consensus revised</h2>
+    <p class="f4 lh-copy mt0-ns">
+      Distributed consensus, the ability to reach agreement in the face of failures and asynchrony, is a fundamental and powerful primitive for constructing reliable distributed systems from unreliable components. For over two decades, the Paxos algorithm has been synonymous with distributed consensus. Paxos is widely deployed in production systems, yet it is poorly understood and it proves to be heavyweight, unscalable and unreliable in practice.
+    </p>
+
+    <p class="f4 lh-copy mt0-ns">
+      In this talk, we re-examine the foundations of how Paxos solves distributed consensus. Our hypothesis is that these limitations are not inherent to the problem of consensus but instead specific to the approach of Paxos. The surprising result of our analysis is a substantial weakening to the requirements of this widely studied algorithm. Building on this insight, we are able to prove an extensive generalisation over the Paxos algorithm.
+    </p>
+
+    <h3>References</h3>
+    <ul class="list pl0 f4 lh-copy">
+      <li><a href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-935.pdf" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">Distributed consensus revised</a> by Heidi Howard</li>
+      <li><a href="https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">The part-time parliament</a> by Leslie Lamport</li>
+      <li><a href="http://www.cs.cornell.edu/courses/cs7412/2011sp/paxos.pdf" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">Paxos Made Moderately Complex</a> by Robbert Van Renesse and Deniz Altinbuken</li>
+      <li><a href="https://arxiv.org/abs/1608.06696" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">Flexible Paxos: Quorum intersection revisited</a> by Heidi Howard, Dahlia Malkhi, Alexander Spiegelman</li>
+      <li><a href="https://arxiv.org/abs/1902.06776" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">A Generalised Solution to Distributed Consensus</a> by Heidi Howard, Richard Mortier</li>
+      <li><a href="https://blog.acolyer.org/2019/05/07/distributed-consensus-revised-part-i/" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">the morning paper:  Distributed consensus revised - Part I</a></li>
+      <li><a href="https://blog.acolyer.org/2019/05/08/distributed-consensus-revised-part-ii/" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">the morning paper:  Distributed consensus revised - Part II</a></li>
+      <li><a href="https://blog.acolyer.org/2019/05/10/distributed-consensus-revised-part-iii/" class="link underline dark-blue hover-bg-yellow" rel="noreferrer nofollow">the morning paper:  Distributed consensus revised - Part III</a></li>
+    </ul>
+    <p class="mv4 p0 bt"></p>
     <p class="f4 lh-copy mt0-ns">
       Dr. Heidi Howard is a research fellow based at Cambridge University’s Department of Computer Science and Technology. Heidi’s research focuses on improving consistency, reliability and performance in distributed systems. Heidi received her BA in Computer Science from Cambridge University in 2014.
     </p>
     <p class="f4 lh-copy mt0-ns">
       In 2019, Heidi received her PhD from Cambridge University for her research on distributed consensus. Heidi is probably most widely known for her generalizations of the widely used Paxos algorithm for solving consensus, including her work on Flexible Paxos.
     </p>
-
     <ul class="list pl0 f4 lh-copy">
+      <li>
+        <strong>Twitter</strong>
+        <a class="link underline dark-blue hover-bg-yellow" href="https://twitter.com/heidiann360">
+          @heidiann360
+        </a>
+      </li>
       <li>
         <strong>Site:</strong>
         <a class="link underline dark-blue hover-bg-yellow" href="http://heidihoward.co.uk">
