@@ -37,7 +37,7 @@ with_layout :pwlconf2019 do
   page "/"
 end
 
-with_layout :pwlconf2019 do
+with_layout :pwlconf2020 do
   page "/2020/*"
 end
 
