@@ -74,9 +74,8 @@ end
     <meta name="og:image:height" content="<%= og_height %>">
     <meta name="og:image:alt" content="<%= og_image_alt %>" />
     <meta name="og:locale" content="en_US">
-    <% unless og_video.nil? %>,
-      <meta name="og:video" content="<%= og_video_url %>">
-    <% end %>
+
+    <meta name="og:video" content="<%= og_video_url %>">
 
     <meta name="fb:description" content="<%= description %>" />
     <meta name="fb:image" content="<%= og_image %>">
