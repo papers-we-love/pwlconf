@@ -1,0 +1,351 @@
+---
+title: Home
+og_title: Papers We Love Conference 2019
+---
+<%
+speakers = [{
+  :speaker => "karim-ali",
+  :name => "Karim Ali",
+  :org => "University of Alberta"
+}, {
+  :speaker => "giulia-fanti",
+  :name => "Giulia Fanti",
+  :org => "Carnegie Mellon University"
+}, {
+  :speaker => "heidi-howard",
+  :name => "Heidi Howard",
+  :org => "Cambridge University"
+},{
+  :speaker => "shriram-krishnamurthi",
+  :name => "Shriram Krishnamurthi",
+  :org => "Brown University"
+},{
+  :speaker => "star-simpson",
+  :name => "Star Simpson",
+  :org => ""
+},{
+  :speaker => "jose-trilla",
+  :name => "José Manuel Calderón Trilla",
+  :org => "Galois"
+}]
+%>
+<script src="/javascripts/automata.js"></script>
+<div id="top-nav-background" class="bg-blue white code">
+  <span id="background-content"></span>
+</div>
+<div id="top-nav-content" class="avenir">
+  <div class="ph4 pt3 pt6-ns pb3 pl5-ns pr5-ns max-width">
+    <h1 class="f-4 mb2 f-headline-ns measure washed-blue">
+      Papers We Love Conf
+    </h1>
+    <h2 class="f3 f1-ns measure normal lightest-blue">
+      September 12, 2019 / St. Louis, Missouri
+    </h2>
+  </div>
+</div>
+<div id="top-nav-links" class="bg-blue avenir">
+  <div class="pt0 pb3 ph4 ph5-ns max-width">
+    <div class="cf">
+      <div class="fl w-100 w-third-ns pa2">
+        <div class="bt b--washed-blue">
+          <a href="/2019/code-of-conduct" class="db pv3 link washed-blue dim f4 lh-copy">
+            Code of Conduct
+          </a>
+        </div>
+      </div>
+      <div class="fl w-100 w-third-ns pa2">
+        <div class="bt b--washed-blue">
+          <a href="/2019/about" class="db pv3 link washed-blue dim f4 lh-copy">
+            About
+          </a>
+        </div>
+      </div>
+      <div class="fl w-100 w-third-ns pa2">
+        <div class="bt b--washed-blue">
+          <a href="/2019/sponsors" class="db pv3 link washed-blue dim f4 lh-copy">
+            Sponsors
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cf ph4 ph5-ns pv3 pv5-ns mt3 mt5-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      We did it!
+    </h1>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <p class="f4 lh-copy mt0-ns">
+      We pulled off another great conference this year,
+      <strong>bridging industry and academia</strong> as  part of
+      <a href="https://thestrangeloop.com/" class="link underline dark-blue hover-bg-yellow">
+        Strange Loop's pre-conference program</a>. We couldn't have done it without
+      our 6 stellar <a href="#speakers" class="link underline dark-blue hover-bg-yellow">
+        <strong>speakers</strong></a> and everyone in the community who came.
+    </p>
+    <p class="f4 lh-copy mt0-ns">
+      🎬 <strong><a href="#videos" class="link underline dark-blue hover-bg-yellow">Videos are up! Click here</a></strong> 🎬
+    </p>
+    <p class="f4 lh-copy">
+      <strong>If you're new to Papers We Love</strong>, check out the
+      <a href="#videos" class="link underline dark-blue hover-bg-yellow">videos</a> from our
+      previous years below. You might also be interested in the repository of
+      academic papers we've assembled on <a href="https://paperswelove.org/"
+                                           class="link underline dark-blue hover-bg-yellow">
+        paperswelove.org</a>. You can also find links to local chapters that hold
+      monthly meetups, there's probably one in your area!
+    </p>
+    <p class="f4 lh-copy">
+      It takes a lot of resources to put on a diverse program every
+      year and we wouldn't be able to do it without our sponsors. <strong>If you or your
+      company are interested in sponsoring</strong> Papers We Love Conf take a look at
+      <a href="/2019/prospectus" class="link underline dark-blue hover-bg-yellow">
+        our prospectus</a>.
+    </p>
+  </div>
+</div>
+
+<!-- Speakers -->
+<div class="cf ph4 ph5-ns pv0 pv0-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h1 id="speakers" class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      Speakers
+    </h1>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <article>
+      <div class="cf pa2">
+        <% for speaker in speakers %>
+          <div class="fl w-100 w-50-m w-50-l pa2">
+            <a href="/2019/<%= speaker[:speaker] %>" class="db link dim tc">
+              <img src="/images/2019/<%= speaker[:speaker] %>.jpg" alt="photo of <%= speaker[:name] %>" class="w-100 db outline black-10"/>
+              <dl class="mt2 f4 lh-copy">
+                <dt class="clip">Speaker</dt>
+                <dd class="ml0 black truncate fw5"><%= speaker[:name] %></dd>
+                <dt class="clip">Organization</dt>
+                <dd class="ml0 gray truncate w-100"><%= speaker[:org] %></dd>
+              </dl>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- Sponsors -->
+<div class="cf ph4 ph5-ns pb4 pb5-m pb5-ns avenir max-width">
+  <header class="db w-100 pa2">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      Sponsors
+    </h1>
+  </header>
+  <div class="w-100 pa2">
+    <article>
+      <div class="tc fl w-100 w-50-m w-50-l pv2">
+        <a href="https://campus2.acm.org/public/qj/pwlconf/qjprofm_control.cfm?promo=pwlconf" class="db link dim tc">
+          <img src="/images/2019/acm.png" alt="logo for sponsor ACM" class="w-100 w-90-ns db"/>
+        </a>
+      </div>
+      <div class="tc fl w-100 w-50-m w-50-l pv2">
+        <a href="https://www.twosigma.com/careers/" class="db link dim tc">
+          <img src="/images/2019/twosigma.jpg" alt="logo for sponsor TwoSigma" class="w-100 w-90-ns db"/>
+        </a>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="w-100 avenir pv0 mv0">
+  <p class="f4 lh-copy tc pv0 mv0">
+    <a href="/2019/sponsors" class="link underline dark-blue hover-bg-yellow">
+      View all of our Sponsors for 2019
+    </a>
+  </p>
+</div>
+
+<!-- Video 2019 -->
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
+  <header id="videos" class="fn fl-ns w-100 w-third-ns pa2">
+    <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
+      <a href="/" class="link purple hover-bg-light-pink">
+        PWLConf 2019 <span class="normal">/ Video</span>
+      </a>
+    </h2>
+    <time class="f6 ttu tracked gray">September 12, 2019</time>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRSgAKk3H9uc5AEH6RaWnY9At" frameborder="0" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen class="aspect-ratio--object"></iframe>
+    </div>
+  </div>
+</div>
+<!-- Video 2018 -->
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
+  <header id="videos" class="fn fl-ns w-100 w-third-ns pa2">
+    <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
+      <a href="/2018" class="link purple hover-bg-light-pink">
+        PWLConf 2018 <span class="normal">/ Video</span>
+      </a>
+    </h2>
+    <time class="f6 ttu tracked gray">September 26, 2018</time>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRSj_p5_bVvGxTUWKBs_Wx-Y-" frameborder="0" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen class="aspect-ratio--object"></iframe>
+    </div>
+  </div>
+</div>
+<!-- Video 2017 -->
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
+      <a href="/2017" class="link purple hover-bg-light-pink">
+        PWLConf 2017 <span class="normal">/ Video</span>
+      </a>
+    </h2>
+    <time class="f6 ttu tracked gray">September 28, 2017</time>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <iframe class="aspect-ratio--object" src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShRY94F1p_3TT1HMoipcc3c" allow="accelerometer; encrypted-media; gyroscope" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- Video 2016 -->
+<div class="cf ph4 ph5-ns pv3 pv5-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h2 class="f3 purple lh-title mt0 pt3 bt bw2">
+      <a href="/2016" class="link purple hover-bg-light-pink">
+        PWLConf 2016 <span class="normal">/ Video</span>
+      </a>
+    </h2>
+    <time class="f6 ttu tracked gray">September 15, 2016</time>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLGRqfvsPiRShwIXMA5P3WR_9LgBOAdvw4" allow="accelerometer; encrypted-media; gyroscope" frameborder="0" allowfullscreen class="aspect-ratio--object"></iframe>
+    </div>
+  </div>
+</div>
+
+
+<!-- Schedule -->
+<div class="cf mv5 ph4 ph5-ns pv0 pv0-ns avenir max-width">
+  <header class="fn fl-ns w-100 w-third-ns pa2">
+    <h1 id="schedule" class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      Schedule
+    </h1>
+  </header>
+  <div class="fn fl-ns w-100 w-two-thirds-ns pa2">
+    <section>
+      <ol class="list ma0 pa0">
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third pr3 pr0-ns b f4 lh-copy">09:50am - 10:00am</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b">Opening</span>
+            <span>Zeeshan Lakhani</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">10:00am - 10:50am</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/shriram-krishnamurthi/" class="link underline dark-blue hover-bg-yellow">
+              On the Expressive Power of Programming Languages
+            </a></span>
+            <span>Shriram Krishnamurthi</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">11:00am - 11:50am</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/giulia-fanti/" class="link underline dark-blue hover-bg-yellow">
+              Privacy Vulnerabilities in the Peer-to-Peer Network of Cryptocurrencies
+            </a></span>
+            <span>Giulia Fanti</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">12:00pm - 01:10pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b">Lunch</span>
+            <span>Foodtrucks provided for PWLConf attendees</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">01:10pm - 02:00pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/karim-ali/" class="link underline dark-blue hover-bg-yellow">
+              Is Program Analysis The Silver Bullet Against Software Bugs?
+            </a></span>
+            <span>Karim Ali</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">02:10pm - 03:00pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/jose-trilla/" class="link underline dark-blue hover-bg-yellow">
+              What about natural numbers?
+            </a></span>
+            <span>José Manuel Calderón Trilla</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">03:00pm - 03:20pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b">Afternoon Break</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third b f4 lh-copy">03:20pm - 04:10pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/heidi-howard/" class="link underline dark-blue hover-bg-yellow">
+              Distributed consensus revised
+            </a></span>
+            <span>Heidi Howard</span>
+          </span>
+        </li>
+        <li class="flex-ns mb3 pb3 bb b--light-gray">
+          <span class="w-third  b f4 lh-copy">04:20pm - 05:10pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b"><a href="/2019/star-simpson/" class="link underline dark-blue hover-bg-yellow">
+              Building Personable Machines
+            </a></span>
+            <span>Star Simpson</span>
+          </span>
+        </li>
+
+        <!-- Last -->
+        <li class="flex-ns">
+          <span class="w-third b f4 lh-copy">05:10pm - 05:15pm</span>
+          <span class="w-two-thirds f4 lh-copy">
+            <span class="db b">
+              Closing Notes
+            </span>
+            <span>PWLConf Team</span>
+          </span>
+        </li>
+      </ol>
+    </section>
+  </div>
+</div>
+
+
+<script>
+ function adjustHeaderHeight() {
+   const contentDiv = document.getElementById('top-nav-content');
+   const bgDiv = document.getElementById('top-nav-background');
+   const topNavLinksDiv = document.getElementById('top-nav-links');
+   const headerHeight = contentDiv.clientHeight;
+   const linksHeight = topNavLinksDiv.clientHeight;
+   bgDiv.style.height = headerHeight + linksHeight + "px";
+   const automataContainer = document.getElementById("background-content");
+   if (automataContainer) {
+     automataContainer.innerHTML = window.Automata.generateAutomata(headerHeight + linksHeight);
+   }
+ }
+
+ const resizeListener = window.addEventListener('resize', adjustHeaderHeight);
+ adjustHeaderHeight()
+</script>
