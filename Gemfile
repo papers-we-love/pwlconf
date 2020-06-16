@@ -29,7 +29,7 @@ gem 'bourbon', "4.3.4"
 gem 'neat', "~> 1.9.0"
 
 # Sanitizers
-gem 'sanitize', '~> 4.6.3'
+gem 'sanitize', '~> 5.2.1'
 
 # Debuggin
 gem 'pry'
